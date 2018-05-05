@@ -1,6 +1,7 @@
 {
   "development": {
     "username": "root",
+    "port": "8889",
     "password": null,
     "database": "database_development",
     "host": "127.0.0.1",
@@ -8,16 +9,13 @@
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "root",
+    "database": "db_gems",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
