@@ -1,0 +1,23 @@
+#login {
+	float: right;
+}
+
+.navbar {
+	height: 150px;
+}
+
+
+
+#title {
+	font-family: Amatic SC;
+	font-weight: bold;
+	color: #09cdef;
+	letter-spacing: 2px;
+}
+
+#logo {
+	height: 40px;
+	width: 40px;
+	padding: 5px;
+
+}
