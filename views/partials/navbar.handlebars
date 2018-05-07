@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Gems</a>
+        
+        {{#if user}}
+        <span>Welcome, {{user.username}}!</span>{{/if}}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/gems/all">Home {{!--
+                        <span class="sr-only">(current)</span> --}}
+                        <span class="sr-only">(gems)</span>
+                    </a>
+                </li>
+                {{#if user }}
+                <li class="nav-item">
+                    <a id="nav-upload" class="nav-link" href="/new-gem">Add New Shortable</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-owner" class="nav-link" href="/gems/owner">My Gems</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-logout" class="nav-link" href="/logout">Logout</a>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a id="nav-login" class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-register" class="nav-link" href="/signup">Sign Up</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<p class="top-menu">
+    <a href="/gems/all">All</a> |
+    <a href="/gems/Art">Art</a> |
+    <a href="/gems/Outdoors">Outdoors</a> |
+    <a href="/gems/Events">Events</a> |
+    <a href="/gems/Others">Events</a> |
+
+    {{!--
+    <a href="/serch-by-author">By Author</a> --}}
+    <p>
