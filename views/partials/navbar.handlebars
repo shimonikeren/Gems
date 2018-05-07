@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg  fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Gems</a>
+        <a class="navbar-brand" href="#"><img class="img-responsive" id="logo" src="images/gem4.png" alt="Gems" height="30" width="30">Gems</a>
         
         {{#if user}}
         <span>Welcome, {{user.username}}!</span>{{/if}}
@@ -18,7 +18,7 @@
                 </li>
                 {{#if user }}
                 <li class="nav-item">
-                    <a id="nav-upload" class="nav-link" href="/new-gem">Add New Shortable</a>
+                    <a id="nav-upload" class="nav-link" href="/newgem">Add New Shortable</a>
                 </li>
                 <li class="nav-item">
                     <a id="nav-owner" class="nav-link" href="/gems/owner">My Gems</a>
@@ -44,7 +44,7 @@
     <a href="/gems/Art">Art</a> |
     <a href="/gems/Outdoors">Outdoors</a> |
     <a href="/gems/Events">Events</a> |
-    <a href="/gems/Others">Events</a> |
+    <a href="/gems/Others">Others</a> |
 
     {{!--
     <a href="/serch-by-author">By Author</a> --}}

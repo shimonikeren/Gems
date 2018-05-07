@@ -35,15 +35,17 @@ module.exports = (app) => {
             }
             req.logIn(user, (err) => {
                 if (err) {
-                    return nex(err);
+                    return next(err)
                 }
-                return res.redirect("/");
+                console.log("login " + user.username)
+                console.log(info)
+                return res.redirect('/newgem');
 
             });
         })(req, res, next);
     });
     app.get("/logout", (req, res, next) => {
-        reg.logout();
+        req.logout();
         req.session.destroy((err) => {
             if (err) {
                 return next(err);
