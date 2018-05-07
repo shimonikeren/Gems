@@ -4,6 +4,9 @@ module.exports = (app) => {
         res.render("index")
     });
     app.get("/signup", (req, res) => {
-        res.render("signup")
+        res.render('signup', { user: req.user });
+    })
+    app.get('/login', (req, res) => {
+        res.render('login', { user: req.user })
     })
 }
