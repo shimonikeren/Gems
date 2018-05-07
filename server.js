@@ -24,6 +24,8 @@ passport.serializeUser(db.User.serializeUser());
 passport.deserializeUser(db.User.deserializeUser());
 
 //require routes
+require("./controllers/http-routes.js")(app);
+//require("./controllers/signup.js")(app);
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
