@@ -1,0 +1,37 @@
+<div class="container box">
+    {{!--
+    <div class="card space"> --}}
+        <p id="new_post_message"></p>
+
+        <form id="new_post_form" name="newgem" method="post" action="/newgem">
+            <div class="form-group">
+                <label for="title_input">Title</label>
+                <input name="title" id="title_input" type="text" />
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" name="category" id="exampleFormControlSelect1">
+                    <option>Art</option>
+                    <option>Outdors</option>
+                    <option>Events</option>
+                    <option>Other</option>
+                </select>
+                </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input name="address" id="address" type="text" />
+            </div>
+
+            <div class="form-group">
+                <label for="decription">Description</label>
+                <textarea name="description" id="content_input" rows="5" cols="50"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Picture</label>
+                <input type="file" name="image" class="form-control-file" id="post_img">
+            </div>
+        
+            <button  class="btn btn-primary" id="new_post_submit">Add Gem</button>
+        </form>
+
+    </div>
