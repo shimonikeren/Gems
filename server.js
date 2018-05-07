@@ -5,9 +5,10 @@ const express = require('express'),
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
     passportLocalSequelize = require('passport-local-sequelize');
+db = require("./models");
 
 
-const app = express();
+let app = express();
 PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -18,7 +19,16 @@ app.use(session({ secret: 'super-secret' }));
 app.use(passport.initialize());
 app.use(passport.session());
 // passport config
+passport.use(db.User.createStrategy());
+passport.serializeUser(db.User.serializeUser());
+passport.deserializeUser(db.User.deserializeUser());
+
 //require routes
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-app.listen(PORT, console.log('Server active on port ' + PORT));
+
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log('Listening on port %s', PORT);
+    });
+});
