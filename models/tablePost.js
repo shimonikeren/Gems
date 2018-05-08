@@ -22,12 +22,13 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [2, 500]
+                len: [2, 1000]
             }
         },
         image: {
-            type: DataTypes.BLOB,
+            type: DataTypes.STRING,
             allowNull: true,
+            defaultValue: 'https://pulpandpixel.ca/assets/uploads/2014/04/gem_city_guide_vancouver_logo_design_1-color-knockout-white_1-color-knockout-white.png'
         }
     });
 
