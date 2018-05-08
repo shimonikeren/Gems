@@ -10,6 +10,9 @@ module.exports = (app) => {
         res.render('login', { user: req.user })
 
     });
+    app.get("/newgem", (req, res) => {
+        res.render("newgem", { user: req.user })
+    })
 
     //app.post('/newgem', (req, res) => {
     //res.render("new")
