@@ -19,7 +19,7 @@ module.exports = (app) => {
                 registeredUser.lastname = req.body['lastname'] || null;
 
                 registeredUser.save();
-                passport.authenticate("local")(req, res, () => res.redirect('/'))
+                passport.authenticate("local")(req, res, () => res.render("gems"))
             }
         )
     });
@@ -38,8 +38,8 @@ module.exports = (app) => {
                     return next(err)
                 }
                 console.log("login " + user.username)
-                console.log(info)
-                return res.redirect('/newgem');
+                console.log("info" + info)
+                return res.redirect('/');
 
             });
         })(req, res, next);

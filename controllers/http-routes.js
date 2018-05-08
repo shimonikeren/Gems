@@ -8,12 +8,11 @@ module.exports = (app) => {
     });
     app.get('/login', (req, res) => {
         res.render('login', { user: req.user })
+
     });
-    app.get('/newgem', (req, res) => {
-            res.render('newgem', { user: req.user })
-        })
-        //app.post('/newgem', (req, res) => {
-        //res.render("new")
-        //})
+
+    //app.post('/newgem', (req, res) => {
+    //res.render("new")
+    //})
 
 }

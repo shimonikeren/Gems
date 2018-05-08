@@ -17,7 +17,7 @@ module.exports = (app) => {
             console.log(req.body);
             post.UserId = req.user.id;
             db.UserPosts.create(post).then((result) => {
-                res.render('new');
+                res.render('gems');
                 //res.json({ id: result.id });
 
 
@@ -30,8 +30,17 @@ module.exports = (app) => {
     });
     app.get("/gems/all", (req, res) => {
         db.UserPosts.findAll({}).then((gems) => {
-            console.log(gems)
-            res.render('gems', { gems: gems })
+            if (!req.user) {
+                res.render("gems", { gems: gems })
+
+            } else {
+                res.render("gems", { user: req.user, gems: gems })
+                console.log(gems)
+            }
+
+
+
+
         })
     })
 }
