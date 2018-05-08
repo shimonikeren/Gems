@@ -1,7 +1,7 @@
 module.exports = (app) => {
     app.get("/", (req, res) => {
         //res.redirect('/gems/all')
-        res.render("index")
+        res.redirect("gems/all")
     });
     app.get("/signup", (req, res) => {
         res.render('signup', { user: req.user });
