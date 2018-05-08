@@ -27,5 +27,11 @@ module.exports = (app) => {
         } else {
             res.status(404).send()
         }
+    });
+    app.get("/gems/all", (req, res) => {
+        db.UserPosts.findAll({}).then((gems) => {
+            console.log(gems)
+            res.render('gems', { gems: gems })
+        })
     })
 }
