@@ -29,6 +29,16 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true,
             defaultValue: 'https://pulpandpixel.ca/assets/uploads/2014/04/gem_city_guide_vancouver_logo_design_1-color-knockout-white_1-color-knockout-white.png'
+        },
+        likes: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: 0
+        },
+        dislikes: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: 0
         }
     });
 
@@ -47,6 +57,12 @@ module.exports = function(sequelize, DataTypes) {
                 allowNull: false
             }
         });
+        UserPosts.associate = function(models) {
+            // Associating User with Posts
+            // When User is deleted, also delete any associated Posts
+            UserPosts.hasMany(models.Comments, { onDelete: 'cascade' });
+        };
+
     };
 
     return UserPosts;

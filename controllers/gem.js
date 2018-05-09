@@ -38,19 +38,47 @@ module.exports = (app) => {
                 console.log(gems)
             }
         })
+    })
+    app.get("/gems/art", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Art
+            }
+        }).then((gems) => {
+            res.render("art", { gems: gems })
+
+        })
+    })
+
+    app.get("/gems/events", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Events
+            }
+        }).then((gems) => {
+            res.render("events", { gems: gems })
+        })
+    })
+
+    app.get("/gems/outdoors", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Outdoors
+            }
+        }).then((gems) => {
+            res.render("outdoors", { gems: gems })
+        })
+    })
+
+    app.get("/gems/others", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Others
+            }
+        }).then((gems) => {
+            res.render("others", { gems: gems })
+
+        })
     });
-    //app.get("/gems/owner", (req, res) => {
-    //if (req.user) {
-    //db.UserPosts.findAll({
-    // where: { UserId: reg.user.id },
-    //order: [
-    // ['createdAt', 'DESC']
-    //]
-    //})
-    //}
-    //}).then((user_posts) => {
-    //if (!user_posts) {
-    //res.render('gems', { user: req.user })
-    //   //}
-    //})
+
 }
