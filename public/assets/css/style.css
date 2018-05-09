@@ -12,3 +12,83 @@
 .img_post {
     width: 7rem
 }
+
+#logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
+}
+#title{
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;
+    display: block;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 50px;
+    color: #09cdef;
+
+}
+
+.navbar-brand {
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 25px;
+	color:#09cdef;
+	letter-spacing: 2px;
+}
+
+#nav-login, #nav-register {
+    font-family: Amatic SC;
+    font-size: 20px;
+    color: #09cdef;
+    letter-spacing: 2px;
+}
+
+#home {
+    font-family: Amatic SC;
+    font-size: 25px;
+    font-weight: bold;
+    color: #09cdef;
+    letter-spacing: 2px;
+}
+
+#sign-in-box {
+    border: 2px solid blue;
+    height: 500px;
+    width: 600px;
+    margin-top: 150px;
+}
+
+#sign-in-header {
+    font-family: Amatic SC;
+    font-size: 50px;
+    font-weight: bold;
+    color: #09cdef;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.logins {
+    font-family: Quicksand;
+    font-size: 20px;
+    color: #09cdef;
+
+}
+
+#login-btn {
+    font-family: Amatic SC;
+    font-size: 20px;
+    color: #09cdef;
+   
+
+}
+
+#login-btn-parent {
+    text-align: center;
+    margin: 0 auto;
+}

@@ -1,20 +1,24 @@
-<nav class="navbar navbar-expand-lg  fixed-top">
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#"><img class="img-responsive" id="logo" src="images/gem4.png" alt="Gems" height="30" width="30">Gems</a>
+        <a class="nav-link" id="home" href="/gems/all">Home</a>
+        <div>
+            <img class="img-responsive" id="logo" src="../../public/assets/images/gem.png" alt="*" height="30" width="30">
+            
+        </div>
+        
         
         {{#if user}}
         <span>Welcome, {{user.username}}!</span>{{/if}}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/gems/all">Home {{!--
+                    {{!-- <a class="nav-link" href="/gems/all">Home 
                         <span class="sr-only">(current)</span> --}}
-                        <span class="sr-only">(gems)</span>
-                    </a>
+                        {{!-- <span class="sr-only">(gems)</span>
+                    </a> --}}
                 </li>
                 {{#if user }}
             
@@ -40,13 +44,14 @@
     </div>
 </nav>
 
-<p class="top-menu">
+{{!-- <p class="top-menu">
     <a href="/gems/all">All</a> |
     <a href="/gems/Art">Art</a> |
     <a href="/gems/Outdoors">Outdoors</a> |
     <a href="/gems/Events">Events</a> |
     <a href="/gems/Others">Others</a> |
+    </p> --}}
 
     {{!--
     <a href="/serch-by-author">By Author</a> --}}
-    <p>
+    
