@@ -4,34 +4,44 @@
         <p id="sign-in-header">New Gem</p>
 
         <form id="new_post_form" name="newgem" method="post" action="/newgem">
-            <div class="form-group">
-                <label for="title_input" class="col-sm-3 col-form-label logins">Title</label>
-                <input name="title" id="title_input" type="text" />
-            </div>
-            <div class="form-group">
-                <label for="category" class="col-sm-3 col-form-label logins">Category</label>
-                <select class="form-control" name="category" id="exampleFormControlSelect1">
+            {{!-- <div class="form-group"> --}}
+                {{!-- <label for="title_input" class="col-sm-3 col-form-label logins">Title</label> --}}
+                <input name="title" id="title_input" class="form-control form-control-lg" type="text" placeholder="Title" /> 
+                <br>
+            {{!-- </div> --}}
+            {{!-- <div class="form-group"> --}}
+                {{!-- <label for="category" class="col-sm-3 col-form-label logins">Category</label> --}}
+                <select class="form-control form-control-lg" name="category" id="exampleFormControlSelect1">
+                    <option>Select Category</option>
                     <option>Art</option>
                     <option>Outdors</option>
                     <option>Events</option>
                     <option>Other</option>
                 </select>
-                </div>
-            <div class="form-group">
-                <label for="address" class="col-sm-3 col-form-label logins">Address</label>
-                <input name="address" id="address" type="text" />
-            </div>
+                <br>
+                {{!-- </div> --}}
+            {{!-- <div class="form-group"> --}}
+                {{!-- <label for="address" class="col-sm-3 col-form-label logins">Address</label> --}}
+                <input name="address" id="address" class="form-control form-control-lg" type="text" placeholder="Location"/>
+                <br>
+            {{!-- </div> --}}
 
-            <div class="form-group">
-                <label for="decription" class="col-sm-3 col-form-label logins">Description</label>
-                <textarea name="description" id="content_input" rows="5" cols="30"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="image" class="col-sm-3 col-form-label logins">Picture URL</label>
-                <input type="url" name="image" class="form-control-file"  id="post_img_url">
-            </div>
+            {{!-- <div class="form-group"> --}}
+                {{!-- <label for="decription" class="col-sm-3 col-form-label logins">Description</label> --}}
+                <textarea name="description" id="content_input" class="form-control form-control-lg" rows="5" cols="30" placeholder="Describe your gem!"></textarea>
+                <br>
+            {{!-- </div> --}}
+            {{!-- <div class="form-group"> --}}
+                {{!-- <label for="image" class="col-sm-3 col-form-label logins">Picture URL</label> --}}
+                <input type="url" name="image" class="form-control-file form-control-lg"  id="post_img_url" placeholder="Image URL">
+                <br>
+            {{!-- </div> --}}
         
-            <button  class="btn btn-primary" id="new_post_submit">Add Gem</button>
+            <button  class="btn btn-outline-primary" id="new_post_submit">Add Gem</button>
+            <br><br>
         </form>
 
     </div>
+
+
+    <br><br><br><br><br>
