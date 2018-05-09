@@ -19,7 +19,7 @@ module.exports = (app) => {
                 registeredUser.lastname = req.body['lastname'] || null;
 
                 registeredUser.save();
-                passport.authenticate("local")(req, res, () => res.render("gems"))
+                passport.authenticate("local")(req, res, () => { res.redirect("/") })
             }
         )
     });

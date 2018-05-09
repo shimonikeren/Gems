@@ -16,10 +16,12 @@
 #logo {
     position: absolute;
     left: 50%;
-    margin-left: -50px !important;  /* 50% of your logo width */
+    margin-left: -50px !important;
+    /* 50% of your logo width */
     display: block;
 }
-#title{
+
+#title {
     position: absolute;
     left: 50%;
     margin-left: -50px !important;
@@ -28,18 +30,18 @@
     font-weight: bold;
     font-size: 50px;
     color: #09cdef;
-
 }
 
 .navbar-brand {
     font-family: Amatic SC;
     font-weight: bold;
     font-size: 25px;
-	color:#09cdef;
-	letter-spacing: 2px;
+    color: #09cdef;
+    letter-spacing: 2px;
 }
 
-#nav-login, #nav-register {
+#nav-login,
+#nav-register {
     font-family: Amatic SC;
     font-size: 20px;
     color: #09cdef;
@@ -61,6 +63,13 @@
     margin-top: 150px;
 }
 
+#sign-up-box {
+    border: 2px solid blue;
+    height: 25rem;
+    width: 35rem;
+    margin-top: 10rem;
+}
+
 #sign-in-header {
     font-family: Amatic SC;
     font-size: 50px;
@@ -70,22 +79,18 @@
     margin: auto;
     text-align: center;
     padding: 10px;
-
 }
 
 .logins {
     font-family: Quicksand;
     font-size: 20px;
     color: #09cdef;
-
 }
 
 #login-btn {
     font-family: Amatic SC;
     font-size: 20px;
     color: #09cdef;
-   
-
 }
 
 #login-btn-parent {
