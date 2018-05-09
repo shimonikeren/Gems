@@ -9,6 +9,23 @@
     background-color: #f5f5f5;
 }
 
+.jumbotron {
+    font-family: Amatic SC;
+    margin: 20px 0;
+    color: #09cdef;
+}
+
+.jumboText {
+    font-size: 30px;
+}
+
+.cardContainer {
+    justify-content: center;
+}
+.eachCard {
+    margin: 15px;
+}
+
 .img_post {
     width: 7rem
 }
@@ -17,8 +34,11 @@
     position: absolute;
     left: 50%;
     margin-left: -50px !important;
+    margin-top: -26px;
     /* 50% of your logo width */
     display: block;
+    height: 55px;
+    width: 65px; 
 }
 
 #title {
