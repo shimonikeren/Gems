@@ -8,7 +8,6 @@ const POST_ATTR = [
     'description',
     'image',
     'createdAt',
-    'published',
 ];
 module.exports = (app) => {
     app.post("/newgem", (req, res) => {
@@ -28,6 +27,7 @@ module.exports = (app) => {
             res.status(404).send()
         }
     });
+
     app.get("/gems/all", (req, res) => {
         db.UserPosts.findAll({}).then((gems) => {
             if (!req.user) {
@@ -37,10 +37,20 @@ module.exports = (app) => {
                 res.render("gems", { user: req.user, gems: gems })
                 console.log(gems)
             }
-
-
-
-
         })
-    })
+    });
+    //app.get("/gems/owner", (req, res) => {
+    //if (req.user) {
+    //db.UserPosts.findAll({
+    // where: { UserId: reg.user.id },
+    //order: [
+    // ['createdAt', 'DESC']
+    //]
+    //})
+    //}
+    //}).then((user_posts) => {
+    //if (!user_posts) {
+    //res.render('gems', { user: req.user })
+    //   //}
+    //})
 }
