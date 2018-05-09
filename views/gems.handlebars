@@ -1,7 +1,17 @@
 
-<ul id="gems-list" class="post-list">
-    {{#each gems}}
-    <li>{{this.title}}{{this.category}}{{this.address}}{{this.description}}
-        <img   class="img_post" src="{{this.image}}"></li>
-   {{/each}}
-<ul>
+   
+    <div class="row text-center">
+<div class="col-md-3 col-sm-6">
+        {{#each gems}}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {{/each}}
+    </div>
+    </div>
+    
