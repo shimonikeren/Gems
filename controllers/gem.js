@@ -37,10 +37,46 @@ module.exports = (app) => {
                 res.render("gems", { user: req.user, gems: gems })
                 console.log(gems)
             }
+        })
+    })
+    app.get("/gems/art", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Art
+              }
+        }).then((gems) => {
+            res.render("art", { gems: gems })
 
-
-
-
+        })
+    })
+    
+    app.get("/gems/events", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Events
+              }
+        }).then((gems) => {
+            res.render("events", { gems: gems })
+        })
+    })
+    
+    app.get("/gems/outdoors", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Outdoors
+              }
+        }).then((gems) => {
+            res.render("outdoors", { gems: gems })
+        })
+    })
+    
+    app.get("/gems/others", (req, res) => {
+        db.UserPosts.findAll({
+            where: {
+                category_name: Others
+              }
+        }).then((gems) => {
+            res.render("others", { gems: gems })
         })
     })
 }
