@@ -6,12 +6,27 @@
             <div class="card-body">
                 <h5 class="card-title">{{gem.title}}</h5>
                 <p class="card-text">{{gem.description}}</p>
-                <p class="card-text"><spam>Address</spam>: {{gem.address}}</p>
+                <p class="card-text"><spam>Address:</spam> {{gem.address}}</p>
+                <p class="card-text"><spam>Author:</spam> {{gem.User.username}}</p>
             </div>
+            {{#if user}}
+            <form action="/gems/{{gem.id}}/coments/add" method="POST">
+            <div class="form-group">
+                <p>Add Comment<p>
+                <input class="form-control" type="text" name="commnet[text]" palseholder="text">
+                </div>
+                <div class="form-group">
+                    <button id="login-btn" type="submit" class="btn btn-outline-primary">Submit!</button>
+
+                </div>
+                    
+            
+            </form>
+             {{/if}}
+
          </div>
 
     </div>
 </div>
 
-</div>
-</div>
+

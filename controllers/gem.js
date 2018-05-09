@@ -7,8 +7,7 @@ const POST_ATTR = [
     'address',
     'description',
     'image',
-    'createdAt',
-    'published',
+    'createdAt'
 ];
 module.exports = (app) => {
     app.post("/newgem", (req, res) => {
@@ -67,7 +66,10 @@ module.exports = (app) => {
     app.get("/gems/:id", (req, res) => {
         db.UserPosts.findOne({
             where: { id: req.params.id },
-            include: [{ model: db.User, attributes: USER_ATTR }]
+            include: [{
+                model: db.User,
+                attributes: USER_ATTR
+            }]
         }).then((gem) => {
             if (gem) {
                 res.render("show", {
@@ -75,7 +77,7 @@ module.exports = (app) => {
                     gem: gem,
 
                 })
-
+                console.log(gem.User)
             } else {
                 res.status(404).send({});
             }
