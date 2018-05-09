@@ -64,20 +64,57 @@
     letter-spacing: 2px;
 }
 
-#nav-login,
-#nav-register {
+#nav-login:link,
+#nav-register:link {
     font-family: Amatic SC;
     font-size: 20px;
     color: #09cdef;
     letter-spacing: 2px;
 }
 
-#home {
+#nav-login:visited,
+#nav-register:visited{
+    font-family: Amatic SC;
+    font-size: 20px;
+    color: #09cdef;
+    letter-spacing: 2px;
+}
+
+#nav-login:hover,
+#nav-register:hover {
+    font-family: Amatic SC;
+    font-size: 20px;
+    color: #09cdef;
+    letter-spacing: 2.5px;
+}
+
+
+/* a.two:link {color:#ff0000;}
+a.two:visited {color:#0000ff;}
+a.two:hover {font-size:150%;} */
+
+#home:link {
     font-family: Amatic SC;
     font-size: 25px;
     font-weight: bold;
     color: #09cdef;
     letter-spacing: 2px;
+}
+
+#home:visited {
+    font-family: Amatic SC;
+    font-size: 25px;
+    font-weight: bold;
+    color: #09cdef;
+    letter-spacing: 2px;
+}
+
+#home:hover {
+    font-family: Amatic SC;
+    font-size: 25px;
+    font-weight: bold;
+    color: #09cdef;
+    letter-spacing: 2.5px;
 }
 
 #sign-in-box {
@@ -106,8 +143,8 @@
     border-style: double;
     border-color: #09cdef;
     border-radius: 10px;
-    height: 40rem;
-    width: 35rem;
+    /* height: 45rem; 
+    width: 35rem;  */
     margin-top: 10rem;
 }
 
@@ -189,3 +226,6 @@
     width:100%;
     transition:800ms ease all;
   }
+
+  
+
