@@ -13,6 +13,8 @@ PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+//the codeline below allows to express static images in addition to the files 
+app.use('/public', express.static('public'))
 app.use(cookieParser());
 app.use(session({ secret: 'super-secret' }));
 
