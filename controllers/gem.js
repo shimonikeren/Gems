@@ -8,6 +8,7 @@ const POST_ATTR = [
     'description',
     'image',
     'createdAt',
+    'published',
 ];
 module.exports = (app) => {
     app.post("/newgem", (req, res) => {
@@ -38,14 +39,16 @@ module.exports = (app) => {
                 console.log(gems)
             }
         })
-    })
+    });
     app.get("/gems/art", (req, res) => {
         db.UserPosts.findAll({
             where: {
                 category_name: Art
             }
         }).then((gems) => {
-            res.render("art", { gems: gems })
+            res.render("art", {
+                gems: gems
+            })
 
         })
     })
@@ -56,7 +59,9 @@ module.exports = (app) => {
                 category_name: Events
             }
         }).then((gems) => {
-            res.render("events", { gems: gems })
+            res.render("events", {
+                gems: gems
+            })
         })
     })
 
@@ -66,7 +71,9 @@ module.exports = (app) => {
                 category_name: Outdoors
             }
         }).then((gems) => {
-            res.render("outdoors", { gems: gems })
+            res.render("outdoors", {
+                gems: gems
+            })
         })
     })
 
@@ -76,9 +83,9 @@ module.exports = (app) => {
                 category_name: Others
             }
         }).then((gems) => {
-            res.render("others", { gems: gems })
-
+            res.render("others", {
+                gems: gems
+            })
         })
-    });
-
+    })
 }
