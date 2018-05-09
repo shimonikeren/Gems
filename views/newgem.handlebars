@@ -1,15 +1,15 @@
-<div class="container box">
+<div class="container box" id="new-in-box">
     {{!--
     <div class="card space"> --}}
-        <p id="new_post_message"></p>
+        <p id="sign-in-header">New Gem</p>
 
         <form id="new_post_form" name="newgem" method="post" action="/newgem">
             <div class="form-group">
-                <label for="title_input">Title</label>
+                <label for="title_input" class="col-sm-3 col-form-label logins">Title</label>
                 <input name="title" id="title_input" type="text" />
             </div>
             <div class="form-group">
-                <label for="category">Category</label>
+                <label for="category" class="col-sm-3 col-form-label logins">Category</label>
                 <select class="form-control" name="category" id="exampleFormControlSelect1">
                     <option>Art</option>
                     <option>Outdors</option>
@@ -18,17 +18,17 @@
                 </select>
                 </div>
             <div class="form-group">
-                <label for="address">Address</label>
+                <label for="address" class="col-sm-3 col-form-label logins">Address</label>
                 <input name="address" id="address" type="text" />
             </div>
 
             <div class="form-group">
-                <label for="decription">Description</label>
-                <textarea name="description" id="content_input" rows="5" cols="50"></textarea>
+                <label for="decription" class="col-sm-3 col-form-label logins">Description</label>
+                <textarea name="description" id="content_input" rows="5" cols="30"></textarea>
             </div>
             <div class="form-group">
-                <label for="image">Picture</label>
-                <input type="url" name="image" class="form-control-file" id="post_img_url">
+                <label for="image" class="col-sm-3 col-form-label logins">Picture URL</label>
+                <input type="url" name="image" class="form-control-file"  id="post_img_url">
             </div>
         
             <button  class="btn btn-primary" id="new_post_submit">Add Gem</button>
