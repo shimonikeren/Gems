@@ -13,17 +13,19 @@
     font-family: Amatic SC;
     margin: 20px 0;
     color: #09cdef;
+    text-align: center;
 }
 
 .jumboText {
     font-size: 30px;
 }
 
-.cardContainer {
-    justify-content: center;
-}
 .eachCard {
-    margin: 15px;
+    margin: 40px;
+    border: 5px;
+    border-style: double;
+    border-color: #09cdef;
+    border-radius: 10px;
 }
 
 .img_post {
