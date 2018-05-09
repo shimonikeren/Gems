@@ -1,1 +1,6 @@
-<!--each gems that have been sorted for others-->
+<ul id="gems-list" class="post-list">
+    {{#each gems}}
+    <li>{{this.title}}{{this.category}}{{this.address}}{{this.description}}
+        <img   class="img_post" src="{{this.image}}"></li>
+   {{/each}}
+<ul>
