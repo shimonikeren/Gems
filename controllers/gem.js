@@ -40,6 +40,28 @@ module.exports = (app) => {
             }
         })
     });
+    app.get("/gems/owner", (req, res) => {
+        if (req.user) {
+            let condition = {
+                UserId: req.user.id
+            };
+            db.UserPosts.findAll({
+                where: condition,
+                order: [
+                    ['createdAt', 'DESC']
+                ],
+                incude: [{
+                    model: db.User,
+                    attributes: USER_ATTR
+                }]
+
+            }).then((gems) => {
+                res.render("gems", { user: req.user, gems: gems })
+
+            })
+        }
+    })
+
     app.get("/gems/art", (req, res) => {
         db.UserPosts.findAll({
             where: {
