@@ -17,7 +17,10 @@ module.exports = (app) => {
             console.log(req.body);
             post.UserId = req.user.id;
             db.UserPosts.create(post).then((result) => {
-                res.render('gems');
+                res.render('show', {
+                    user: req.user,
+                    gems: gems
+                });
                 //res.json({ id: result.id });
 
 
@@ -60,6 +63,23 @@ module.exports = (app) => {
 
             })
         }
+    });
+    app.get("/gems/:id", (req, res) => {
+        db.UserPosts.findOne({
+            where: { id: req.params.id },
+            include: [{ model: db.User, attributes: USER_ATTR }]
+        }).then((gem) => {
+            if (gem) {
+                res.render("show", {
+                    user: req.user,
+                    gem: gem,
+
+                })
+
+            } else {
+                res.status(404).send({});
+            }
+        })
     })
 
     app.get("/gems/art", (req, res) => {
