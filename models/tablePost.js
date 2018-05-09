@@ -33,12 +33,12 @@ module.exports = function(sequelize, DataTypes) {
         likes: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            defaultValue: "0"
+            defaultValue: 0
         },
         dislikes: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            defaultValue: "0"
+            defaultValue: 0
         }
     });
 
