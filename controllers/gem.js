@@ -169,4 +169,13 @@ module.exports = (app) => {
             })
         })
     })
+
+    app.delete("/gems/:id/delete", (req, res) => {                      db.UserPosts.destroy({             
+        where: {
+            id: req.params.id             
+        }         
+    }).then((dbPost) => {             
+        res.send("deleted")         
+        })     
+    })
 }
