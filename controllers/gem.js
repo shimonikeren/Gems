@@ -13,12 +13,13 @@ module.exports = (app) => {
     app.post("/newgem", (req, res) => {
         if (req.user) {
             let post = req.body;
-            console.log(req.body);
+            //console.log("gem  " + req.body);
+            //console.log(res.json(req.body))
             post.UserId = req.user.id;
-            db.UserPosts.create(post).then((result) => {
+            db.UserPosts.create(post).then((gem) => {
                 res.render('show', {
                     user: req.user,
-                    gems: gems
+                    gem: gem
                 });
                 //res.json({ id: result.id });
 
@@ -87,10 +88,11 @@ module.exports = (app) => {
     app.get("/gems/art", (req, res) => {
         db.UserPosts.findAll({
             where: {
-                category_name: Art
+                category: "Art"
             }
         }).then((gems) => {
-            res.render("art", {
+            res.render("gems", {
+                user: req.user,
                 gems: gems
             })
 
@@ -100,10 +102,10 @@ module.exports = (app) => {
     app.get("/gems/events", (req, res) => {
         db.UserPosts.findAll({
             where: {
-                category_name: Events
+                category: "Events"
             }
         }).then((gems) => {
-            res.render("events", {
+            res.render("gems", {
                 gems: gems
             })
         })
@@ -112,10 +114,10 @@ module.exports = (app) => {
     app.get("/gems/outdoors", (req, res) => {
         db.UserPosts.findAll({
             where: {
-                category_name: Outdoors
+                category: "Outdoors"
             }
         }).then((gems) => {
-            res.render("outdoors", {
+            res.render("gems", {
                 gems: gems
             })
         })
@@ -124,10 +126,10 @@ module.exports = (app) => {
     app.get("/gems/others", (req, res) => {
         db.UserPosts.findAll({
             where: {
-                category_name: Others
+                category: "Others"
             }
         }).then((gems) => {
-            res.render("others", {
+            res.render("gems", {
                 gems: gems
             })
         })
