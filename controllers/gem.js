@@ -78,24 +78,38 @@ module.exports = (app) => {
                 attributes: USER_ATTR
             }]
         }).then((gem) => {
-            if (req.user.id == gem.UserId) {
-                let author = req.user;
-                author.owner = true;
+            if (req.user) {
+                if (req.user.id == gem.UserId) {
+                    let author = req.user;
+                    author.owner = true;
 
-                console.log(author)
-                console.log(gem.UserId)
-                console.log(req.user.id)
-                res.render("show", {
+                    console.log(author)
+                    console.log(gem.UserId)
+                    console.log(req.user.id)
+                    res.render("show", {
 
-                    gem: gem,
-                    user: author
+                        gem: gem,
+                        user: author
 
 
 
-                })
-                console.log(gem.User)
-            } else if (gem) {
+                    })
+                    console.log(gem.User)
+                } else if (gem) {
 
+                    res.render("show", {
+                        user: req.user,
+                        gem: gem,
+
+
+
+                    })
+
+
+                } else {
+                    res.status(404).send({});
+                }
+            } else {
                 res.render("show", {
                     user: req.user,
                     gem: gem,
@@ -103,12 +117,9 @@ module.exports = (app) => {
 
 
                 })
-
-
-            } else {
-                res.status(404).send({});
             }
         })
+
     })
 
     app.get("/gems/art", (req, res) => {
