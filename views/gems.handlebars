@@ -1,10 +1,27 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-      <br>
-      <!--below is dummy text-feel free to change-->
-    <h1 class="display-4">Discover Gems</h1>
-        <!--below is dummy text-it can be buttons or dropdown menu-->
-    <p class="lead jumboText"><a href="/gems/all">All</a> | <a href="/gems/art">Art</a> |  <a href="/gems/outdoors">Outdoors</a> | <a href="/gems/events">Events</a> | <a href="/gems/others">Others</a></p>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../../public/assets/images/muralspace.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+    <h5>Discover</h5>
+    <p></p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../../public/assets/images/muralTracks.jpg" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+    <h5>Don't Break the Bank</h5>
+    <p>...</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../../public/assets/images/knightsLanding.jpg" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block">
+    <h5>Find Your Hidden Gem!</h5>
+    <p>...</p>
+  </div>
+    </div>
   </div>
 </div>
 <div>
@@ -16,13 +33,13 @@
         {{#each gems}}
             <div class="col-xs-4 eachCard">     
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+                    {{!-- <img class="card-img-top" src="{{this.image}}" alt=""> --}}
                     <div class="card-body">
                         <h5 class="card-title">{{this.title}}</h5>
                         <p class="card-text">{{this.description}}</p>
                         <p class="card-text">{{this.category}}</p>
                         <p class="card-text">{{this.address}}</p>
-                        <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a>
+                        <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary" id="more-info">More Info</a>
                     </div>
                 </div>
             </div>
