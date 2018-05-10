@@ -1,7 +1,3 @@
-body {
-    background: linear-gradient( 180deg, white, rgb(115, 115, 228));
-}
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -237,4 +233,8 @@ a.two:hover {font-size:150%;} */
 .btn-outline-primary:hover:after {
     width: 100%;
     transition: 800ms ease all;
+}
+
+.message {
+    margin-top: 4rem;
 }
