@@ -78,7 +78,7 @@
     display: block;
     height: 55px;
     width: 65px;
-} */
+
 
 #title {
     position: absolute;
@@ -99,30 +99,6 @@
     letter-spacing: 2px;
 }
 
-/* #home:link,
-#nav-login:link,
-#nav-register:link {
-    font-family: Josefin Sans;
-    font-size: 20px;
-    color: #09cdef;
-    letter-spacing: 2px;
-}
-#home:visited,
-#nav-login:visited,
-#nav-register:visited {
-    font-family: Josefin Sans;
-    font-size: 20px;
-    color: #09cdef;
-    letter-spacing: 2px;
-}
-#home:hover,
-#nav-login:hover,
-#nav-register:hover {
-    font-family: Josefin Sans;
-    font-size: 20px;
-    color: #09cdef;
-    letter-spacing: 2.5px;
-} */
 
 .nav-link:link {
     font-family: Josefin Sans;
@@ -288,52 +264,11 @@
     transition: 800ms ease all;
 }
 
-/* #more-info {
-    background: #09cdef;
-    color: #fff;
-    border: none;
-    position: relative;
-    height: 50px;
-    font-size: 1.6em;
-    font-family: Amatic SC;
-    color: white;
-    padding: 0 2em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-}
 
-#more-info:hover {
-    background: #fff;
-    color: #4c2b89;
-}
-
-#more-info:before,
-#more-info:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: #4c2b89;
-    transition: 400ms ease all;
-}
-#more-info:after{
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-}
-
-#more-info:before,
-#more-info:after{
-    width: 100%;
-    transition: 800ms ease all;
-} */
   
 
 .carousel-inner, .item {
     width:1460px;
     height:360px;
   }
+

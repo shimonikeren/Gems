@@ -23,7 +23,12 @@
             
             </form>
              {{/if}}
+{{#if user.owner}}
+<form id="post_delete" action="/gems/{{gem.id}}/delete" method="POST">
+<button class="btn btn-xs btn-danger">DELETE</button>
 
+</form>
+ {{/if}}
          </div>
 
     </div>
