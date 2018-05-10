@@ -30,7 +30,12 @@ module.exports = (app) => {
             }
             if (!user) {
                 console.log("wrong password");
-                return res.redirect('/');
+
+
+                return res.render('login', {
+                    title: 'Invalid username or password. Try again.',
+                    users: null
+                });
 
             }
             req.logIn(user, (err) => {
