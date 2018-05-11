@@ -33,6 +33,7 @@ module.exports = (app) => {
     });
 
     app.get("/gems/all", (req, res) => {
+       console.log("TEST");
         db.UserPosts.findAll({}).then((gems) => {
             if (!req.user) {
                 res.render("gems", { gems: gems })
@@ -179,6 +180,7 @@ module.exports = (app) => {
     })
 
 
+
     app.delete("/gems/:id/delete", (req, res) => {
         db.UserPosts.destroy({
             where: {
@@ -188,5 +190,6 @@ module.exports = (app) => {
             res.status(200).send();
 
         })
+
     })
 }
