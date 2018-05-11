@@ -33,7 +33,7 @@ module.exports = (app) => {
     });
 
     app.get("/gems/all", (req, res) => {
-       console.log("TEST");
+
         db.UserPosts.findAll({}).then((gems) => {
             if (!req.user) {
                 res.render("gems", { gems: gems })
@@ -66,6 +66,7 @@ module.exports = (app) => {
                     user: req.user,
                     gems: gems,
                     user: author,
+                    msg: "My Gems"
                 })
 
             })
@@ -112,20 +113,7 @@ module.exports = (app) => {
 
         })
     })
-    app.get("/gems/category/art", (req, res) => {
-        console.log("Art Route");
-        db.UserPosts.findAll({
-            where: {
-                category: "Art"
-            }
-        }).then((gems) => {
-            res.render("gems", {
-                user: req.user,
-                gems: gems
-            })
 
-        })
-    })
     app.get("/gems/category/art", (req, res) => {
         console.log("Art Route");
         db.UserPosts.findAll({
@@ -133,7 +121,8 @@ module.exports = (app) => {
         }).then((gems) => {
             res.render("gems", {
                 user: req.user,
-                gems: gems
+                gems: gems,
+                msg: "Art"
             })
 
         })
@@ -147,7 +136,8 @@ module.exports = (app) => {
         }).then((gems) => {
             res.render("gems", {
                 user: req.user,
-                gems: gems
+                gems: gems,
+                msg: "Outdoots"
             })
 
         })
@@ -160,21 +150,23 @@ module.exports = (app) => {
             }
         }).then((gems) => {
             res.render("gems", {
-                gems: gems
+                gems: gems,
+                msg: "Events"
             })
         })
     })
 
 
 
-    app.get("/gems/category/others", (req, res) => {
+    app.get("/gems/category/other", (req, res) => {
         db.UserPosts.findAll({
             where: {
-                category: "Others"
+                category: "Other"
             }
         }).then((gems) => {
             res.render("gems", {
-                gems: gems
+                gems: gems,
+                msg: "Others"
             })
         })
     })
