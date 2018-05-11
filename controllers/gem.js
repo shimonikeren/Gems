@@ -81,31 +81,37 @@ module.exports = (app) => {
             if (gem) {
                 if (req.user) {
                     if (req.user.id == gem.UserId) { 
-                        let author = req.user;
-                        author.owner = true;
-                        console.log(author)
-                        console.log(gem.UserId)
-                        console.log(req.user.id)
-                        res.render("show", {
-                            gem: gem,
-                            user: author
+                      
+                    let author = req.user;
+                    author.owner = true;
+                    console.log(author)
+                    console.log(gem.UserId)
+                    console.log(req.user.id)
+                    res.render("show", {
+                        gem: gem,
+                        user: author
                         })
-                        console.log(gem.User)
+                    console.log(gem.User)
                     } else {                           
                         res.render("show", {
-                            user: req.user,
-                            gem: gem,
-                        })
+                        user: req.user,
+                        gem: gem,
+                            })
+                        } 
                     } 
+                    else {                           
+                        res.render("show", {
+                        user: req.user,
+                        gem: gem,
+                            })
+                        } 
                 } 
-            } 
             else {
-                res.status(404).send({});
-            }
-
+            res.status(404).send({});
+            }  
+           
 
         })
-
     })
 
     app.get("/gems/art", (req, res) => {
@@ -156,6 +162,7 @@ module.exports = (app) => {
         })
     })
 
+
     app.delete("/gems/:id/delete", (req, res) => {         
         db.UserPosts.destroy({             
         where: {
@@ -163,6 +170,7 @@ module.exports = (app) => {
         }         
     }).then((gems) => {  
         res.status(200).send();
+
         })     
     })
 }
