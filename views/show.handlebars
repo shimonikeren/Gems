@@ -24,9 +24,8 @@
             </form>
              {{/if}}
 {{#if user.owner}}
-<form id="post_delete" action="/gems/{{gem.id}}/delete" method="POST">
-<button class="btn btn-xs btn-danger">DELETE</button>
-
+<form id="post_delete">
+<button class="btn btn-xs btn-danger deleteButton" type="submit" data-id="{{gem.id}}">DELETE</button>
 </form>
  {{/if}}
          </div>
