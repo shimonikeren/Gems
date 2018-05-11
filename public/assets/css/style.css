@@ -85,14 +85,6 @@
 
 }
 
- /* #logo {
-    position: absolute;
-    left: 50%;
-    margin-left: -50px !important;
-    margin-top: -26px;
-    display: block;
-    height: 55px;
-    width: 65px;} */
 
 
 #title {
@@ -198,25 +190,6 @@
     color: #09cdef;
 }
 
-
-/* #login-btn {
-    font-family: Amatic SC;
-    font-size: 20px;
-    color: white;
-} */
-
-
-/* .btn-outline-primary {
-    background-color: transparent;
-    background-image: none;
-    border-color: #09cdef;
-}
-
-.btn-outline-primary:hover {
-    background-color: lightblue;
-    color: white;
-    border: #09cdef; 
-} */
 
 #login-btn-parent {
     text-align: center;
