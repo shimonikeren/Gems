@@ -52,10 +52,9 @@ module.exports = function(sequelize, DataTypes) {
         });
         // We're saying that a Post should belong to a Category
         // A Post can't be created without an Category due to the foreign key constraint
-        UserPosts.belongsTo(models.Category, {
-            foreignKey: 'CategoryId'
 
-        });
+
+
         UserPosts.associate = function(models) {
             // Associating User with Posts
             // When User is deleted, also delete any associated Posts

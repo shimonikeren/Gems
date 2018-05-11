@@ -81,43 +81,69 @@ module.exports = (app) => {
         }).then((gem) => {
             if (gem) {
                 if (req.user) {
-                    if (req.user.id == gem.UserId) { 
-                      
-                    let author = req.user;
-                    author.owner = true;
-                    console.log(author)
-                    console.log(gem.UserId)
-                    console.log(req.user.id)
-                    res.render("show", {
-                        gem: gem,
-                        user: author
+                    if (req.user.id == gem.UserId) {
+
+                        let author = req.user;
+                        author.owner = true;
+                        console.log(author)
+                        console.log(gem.UserId)
+                        console.log(req.user.id)
+                        res.render("show", {
+                            gem: gem,
+                            user: author
                         })
-                    console.log(gem.User)
-                    } else {                           
+                        console.log(gem.User)
+                    } else {
                         res.render("show", {
+                            user: req.user,
+                            gem: gem,
+                        })
+                    }
+                } else {
+                    res.render("show", {
                         user: req.user,
                         gem: gem,
-                            })
-                        } 
-                    } 
-                    else {                           
-                        res.render("show", {
-                        user: req.user,
-                        gem: gem,
-                            })
-                        } 
-                } 
-            else {
-            res.status(404).send({});
-            }  
-           
+                    })
+                }
+            } else {
+                res.status(404).send({});
+            }
+
 
         })
     })
-
-    app.get("/gems/art", (req, res) => {
+    app.get("/gems/category/art", (req, res) => {
+        console.log("Art Route");
         db.UserPosts.findAll({
-            attributes: { category: ["Art"] }
+            where: {
+                category: "Art"
+            }
+        }).then((gems) => {
+            res.render("gems", {
+                user: req.user,
+                gems: gems
+            })
+
+        })
+    })
+    app.get("/gems/category/art", (req, res) => {
+        console.log("Art Route");
+        db.UserPosts.findAll({
+            where: { category: "Art" }
+        }).then((gems) => {
+            res.render("gems", {
+                user: req.user,
+                gems: gems
+            })
+
+        })
+    })
+    app.get("/gems/category/outdoors", (req, res) => {
+        console.log("Art Route");
+        db.UserPosts.findAll({
+            where: {
+                category: "Outdoors"
+            }
         }).then((gems) => {
             res.render("gems", {
                 user: req.user,
@@ -127,7 +153,7 @@ module.exports = (app) => {
         })
     })
 
-    app.get("/gems/events", (req, res) => {
+    app.get("/gems/category/events", (req, res) => {
         db.UserPosts.findAll({
             where: {
                 category: "Events"
@@ -139,19 +165,9 @@ module.exports = (app) => {
         })
     })
 
-    app.get("/gems/outdoors", (req, res) => {
-        db.UserPosts.findAll({
-            where: {
-                category: "Outdoors"
-            }
-        }).then((gems) => {
-            res.render("gems", {
-                gems: gems
-            })
-        })
-    })
 
-    app.get("/gems/others", (req, res) => {
+
+    app.get("/gems/category/others", (req, res) => {
         db.UserPosts.findAll({
             where: {
                 category: "Others"
@@ -164,14 +180,16 @@ module.exports = (app) => {
     })
 
 
-    app.delete("/gems/:id/delete", (req, res) => {         
-        db.UserPosts.destroy({             
-        where: {
-            id: req.params.id             
-        }         
-    }).then((gems) => {  
-        res.status(200).send();
-        console.log("worked");
-        })     
+
+    app.delete("/gems/:id/delete", (req, res) => {
+        db.UserPosts.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then((gems) => {
+            res.status(200).send();
+
+        })
+
     })
 }
