@@ -1,27 +1,21 @@
-<div><p class="message">{{title}}</p></div>
+<div>
+    <p class="message">{{title}}</p>
+</div>
 <div class="box container" id ="sign-up-box">
     <h3 id="sign-in-header">Sign Up</h3>
     <form id="signup" name="signup" method="post" action="/signup">
-
-        
         <input id="add-email" class="form-control form-control-lg" name="email" type="email" placeholder="Email"/>
         <br>
-        {{!-- <label for="firstname"class="col-sm-6 col-form-label logins">First Name</label> --}}
         <input id="add-first" class="form-control form-control-lg" name="firstname" type="text" placeholder="First Name" />
         <br>
-        {{!-- <label for="lastname" class="col-sm-6 col-form-label logins">Last Name</label> --}}
         <input id="add-last" class="form-control form-control-lg" name="lastname" type="text" placeholder="Last Name" />
         <br>
-        {{!-- <label for="username" class="col-sm-6 col-form-label logins">Username</label> --}}
         <input id="add-username" class="form-control form-control-lg" name="username" type="text" placeholder="Username"/>
         <br>
-        {{!-- <label for="password" class="col-sm-6 col-form-label logins">Password</label> --}}
         <input id="add-password" class="form-control form-control-lg" name="password" type="password" placeholder="Password"/>
         <br>
         <div id="login-btn-parent">
-        {{!-- <input id="sign-up" class="btn btn-outline-primary" type="submit" value="Sign Up" />  --}}
-        <button id="sign-up" type="submit" class="btn btn-outline-primary" value="Sign Up">Sign Up</button>
-
+            <button id="sign-up" type="submit" class="btn btn-outline-primary" value="Sign Up">Sign Up</button>
         </div>
     </form>
 </div>
