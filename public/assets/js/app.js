@@ -9,7 +9,7 @@ $(".deleteButton").on("click", function(event) {
     }).then(
       function(something) {
         console.log("worked");
-        // location.reload();
+        window.location.href="/gems/all";
       }
     );
   });
