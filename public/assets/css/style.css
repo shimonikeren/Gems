@@ -81,12 +81,50 @@
 
 }
 
+#home:link {
+    padding: 0px 5px 0px 5px;
+    margin-top: 5px;;
+    display: inline;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 40px;
+    color: #09cdef;
+    letter-spacing: 2px;
+}
+
+#home:visited {
+    padding: 0px 5px 0px 5px;
+    margin-top: 5px;;
+    display: inline;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 40px;
+    color: #09cdef;
+    letter-spacing: 2px;
+}
+
+#home:hover {
+    padding: 0px 5px 0px 5px;
+    margin-top: 5px;;
+    display: inline;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 40px;
+    color: #09cdef;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
 #logo-left {
     position: relative;
-    bottom: 10px;
+    /* bottom: 10px; */
 
 }
 
+#homeright {
+    position: relative;
+    top: 10px;
+}
 
 
 #title {
@@ -135,7 +173,7 @@
     font-family: Josefin Sans;
     font-size: 18px;
     color: #09cdef !important;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     font-weight: normal;
 }
 
