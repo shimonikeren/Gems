@@ -33,7 +33,7 @@ module.exports = (app) => {
     });
 
     app.get("/gems/all", (req, res) => {
-        console.log("TEST");
+
         db.UserPosts.findAll({}).then((gems) => {
             if (!req.user) {
                 res.render("gems", { gems: gems })
@@ -66,6 +66,7 @@ module.exports = (app) => {
                     user: req.user,
                     gems: gems,
                     user: author,
+                    msg: "My Gems"
                 })
 
             })
