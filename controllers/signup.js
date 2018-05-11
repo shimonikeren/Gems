@@ -30,7 +30,7 @@ module.exports = (app) => {
             }
             if (!user) {
                 console.log("wrong password");
-
+                $(".message").alert();
 
                 return res.render('login', {
                     title: 'Invalid username or password. Try again.',
