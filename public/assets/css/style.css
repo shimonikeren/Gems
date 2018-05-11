@@ -47,6 +47,10 @@
     color: white;
 }
 
+#card {
+    margin-bottom: 10rem;
+}
+
 .eachCard {
     margin: 40px;
     border: 5px;

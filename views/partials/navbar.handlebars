@@ -1,27 +1,17 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
     <div class="container" id="nav-container">
         <div>
-        <p class="brand">Gems</p> <img class="img-responsive" id="logo-left"src="../../public/assets/images/gemTeal.jpeg" alt="*" height="40" width="45"><p class="brand">Sacramento</p>
+            <p class="brand">Gems</p><img class="img-responsive" id="logo-left"src="../../public/assets/images/gemTeal.jpeg" alt="*" height="40" width="45"><p class="brand">Sacramento</p>
         </div>
-        
-        
-       </div>
-       <div class="container ml-left">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    </div>
+    <div class="container ml-left">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    {{!-- <a class="nav-link" href="/gems/all">Home 
-                        <span class="sr-only">(current)</span> --}}
-                        {{!-- <span class="sr-only">(gems)</span>
-                    </a> --}}
-                </li>
                 {{#if user }}
                 <li class="nav-item"> 
-                 <a class="nav-link links" id="home" href="/gems/all">Home</a>
-                 </li>
+                    <a class="nav-link links" id="home" href="/gems/all">Home</a>
+                </li>
                 <li class="nav-item">
                     <a id="nav-upload" class="nav-link links" href="/newgem">Add New Gem</a>
                 </li>
@@ -29,26 +19,25 @@
                     <a id="nav-owner" class="nav-link links" href="/gems/owner">My Gems</a>
                 </li>
                 <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Search
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/gems/art">Art</a>
-          <a class="dropdown-item" href="/gems/outdoors">Outdoors</a>
-          
-          <a class="dropdown-item" href="/gems/events">Events</a>
-        </div>
-      </li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/gems/art">Art</a>
+                        <a class="dropdown-item" href="/gems/outdoors">Outdoors</a>
+                        <a class="dropdown-item" href="/gems/events">Events</a>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a id="nav-logout" class="nav-link links" href="/logout">Logout</a>
                 </li>
-                 {{#if user}}
-        <li class="nav-item"><span class="nav-link"id="welcome">Hi, {{user.firstname}}!</span></li>{{/if}}
+                {{#if user}}
+                <li class="nav-item">
+                    <span class="nav-link"id="welcome">Hi, {{user.firstname}}!</span>
+                </li>
+                {{/if}}
                 {{else}}
                 <li class="nav-item"> 
-                 <a class="nav-link links" id="home" href="/gems/all">Home</a>
-                 </li>
-                 
+                    <a class="nav-link links" id="home" href="/gems/all">Home</a>
+                </li>
                 <li class="nav-item">
                     <a id="nav-login" class="nav-link links" href="/login">Sign In</a>
                 </li>
@@ -56,16 +45,13 @@
                     <a id="nav-register" class="nav-link links" href="/signup">Sign Up</a>
                 </li>
                 <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Search
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/gems/art">Art</a>
-          <a class="dropdown-item" href="/gems/outdoors">Outdoors</a>
-          
-          <a class="dropdown-item" href="/gems/events">Events</a>
-        </div>
-      </li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/gems/art">Art</a>
+                        <a class="dropdown-item" href="/gems/outdoors">Outdoors</a>
+                        <a class="dropdown-item" href="/gems/events">Events</a>
+                    </div>
+                </li>
                 {{/if}}
             </ul>
         </div>
