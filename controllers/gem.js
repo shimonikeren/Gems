@@ -81,6 +81,7 @@ module.exports = (app) => {
             if (gem) {
                 if (req.user) {
                     if (req.user.id == gem.UserId) { 
+                      
                     let author = req.user;
                     author.owner = true;
                     console.log(author)
@@ -108,8 +109,7 @@ module.exports = (app) => {
             else {
             res.status(404).send({});
             }  
-            
-            
+           
 
         })
     })
@@ -162,14 +162,15 @@ module.exports = (app) => {
         })
     })
 
-    app.delete("/gems/:id/delete", (req, res) => {                      
+
+    app.delete("/gems/:id/delete", (req, res) => {         
         db.UserPosts.destroy({             
         where: {
             id: req.params.id             
         }         
-    }).then((dbPost) => {             
-        res.send("deleted");
-        //make something happen here         
+    }).then((gems) => {  
+        res.status(200).send();
+
         })     
     })
 }
