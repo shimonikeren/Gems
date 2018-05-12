@@ -32,7 +32,6 @@ $("#like-btn").on("click", function(event) {
 
 
 
-
 $("#dislike-btn").on("click", function(event) {
     event.preventDefault();
     var itemId = $(this).data("id");
