@@ -277,6 +277,10 @@
   height: 20rem;
 }
 
+.carousel {
+  margin-top: 5rem;
+}
+
 h5 {
   text-align: left;
 }
@@ -291,7 +295,7 @@ h5 {
   height: 40%;
 }
 
-#gem-card{
+#gem-card {
   max-width: 298px;
   max-height: 451px;
 }
