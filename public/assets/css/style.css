@@ -346,14 +346,12 @@ h5 {
   margin-bottom: 10rem;
 }
 
-
 .deleteButton {
   margin-bottom: 0.3125rem;
   margin-left: 1.25rem;
   font-family: Amatic SC;
   font-size: 1.125rem;
   color: cc0000;
-  
 }
 
 .category-msg {
@@ -362,11 +360,11 @@ h5 {
   font-size: 3rem;
   text-align: left;
   margin-bottom: 0rem;
-  
 }
 
 #more-info-btn {
   float: left;
+}
 
 .carousel-inner {
   width: 100%;
@@ -387,7 +385,6 @@ h5 {
   width: auto;
   margin-top: auto;
   margin-bottom: auto;
-
 }
 .commentCard {
   border: 0.3125rem;
