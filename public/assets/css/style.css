@@ -113,7 +113,6 @@
 
 #logo-left {
   position: relative;
-  
 }
 
 #homeright {
@@ -278,9 +277,9 @@
   height: 20rem;
 }
 
-.carousel {
+/* .carousel {
   margin-top: 5rem;
-}
+} */
 
 h5 {
   text-align: left;
@@ -322,10 +321,9 @@ h5 {
 }
 
 #more-info-title {
-font-family: Amatic SC;
-font-size: 3.125rem;
-color: #09cdef;
-
+  font-family: Amatic SC;
+  font-size: 3.125rem;
+  color: #09cdef;
 }
 
 #more-info-location {
@@ -341,13 +339,13 @@ color: #09cdef;
 }
 
 .sub {
-
 }
 
 #comments {
   width: 50rem;
   margin-bottom: 10rem;
 }
+
 
 .deleteButton {
   margin-bottom: 0.3125rem;
@@ -369,4 +367,25 @@ color: #09cdef;
 
 #more-info-btn {
   float: left;
+
+.carousel-inner {
+  width: 100%;
+  height: 20rem;
+}
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+  height: 360px;
+}
+
+.carousel-item img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+
 }
