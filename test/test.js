@@ -1,19 +1,35 @@
-// var Nightmare = require("nightmare");
+var Nightmare = require("nightmare");
+var expect = require("chai").expect;
 
-// //=================== test login process =================
-// new Nightmare({ show: true })
-//   .goto("http://localhost:8080/gems/all")
-//   .type("#login-name", "kjh")
-//   .type("#login-pw", "kjh")
-//   .screenshot("log-in.png")
-//   .click("#login-btn")
-//   .screenshot("logged-in.png")
-//   .end()
-//   .then(function() {
-//     console.log("Done!");
-//   })
-//   .catch(function(err) {
-//     console.log(err);
-//   });
+describe("Gems", function() {
+  this.timeout(30000);
+  it("should send user to home page", function(done) {
+    Nightmare({ show: true })
+      .goto("http://localhost:8080/gems/all")
+      .click("a[href='/login']")
+      .evaluate(function() {
+        return document.title;
+      })
+      .then(function(title) {
+        expect(title).to.equal("Gems");
+        done();
+      });
+  });
 
+  it("should log user in", function(done) {
+    new Nightmare({ show: true })
+      .goto("http://localhost:8080/login")
+      .type("#login-name", "kerennn")
+      .type("#login-pw", "123")
+      .click("#login-btn")
+      .evaluate(function() {
+        return document.querySelector("a[href='/gems/all']");
+      })
+      .then(function(link) {
+        expect(link).to.not.equal(undefined);
+        done();
+      });
+  });
 
+  
+});
