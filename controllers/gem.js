@@ -190,7 +190,6 @@ module.exports = (app) => {
 
         let val = 1;
 
-
         db.UserPosts.update({
             likes: db.sequelize.literal("likes + 1")
         }, {
@@ -205,9 +204,8 @@ module.exports = (app) => {
 
         let val = 1;
 
-
         db.UserPosts.update({
-            likes: db.sequelize.literal("dislikes + 1")
+            dislikes: db.sequelize.literal("dislikes + 1")
         }, {
             where: {
                 id: req.params.id
