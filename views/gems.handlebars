@@ -31,31 +31,32 @@
     <p class="message">{{title}}</p>
 </div>
 {{#if gems}}
-<div class="container text-center">
+
+<div class="container" id="">
+    <div class="container text-center">
     <div class="msg">
-        <h5>{{msg}}</h5>
+        <p class="category-msg">{{msg}}</p>
     </div>
 </div>
-<div class="container" id="">
-    <div class="row text-center cardContainer" id="card">
+<div class="row text-center cardContainer" id="card">
         {{#each gems}}
 
         <div class="col-xs-4 eachCard">
             <div class="card h-100" id="gem-card" style="width: 18rem;">
                 <img class="card-img-top" src="{{this.image}}" alt="">
                 <div class="card-body">
-                    <h5 class="card-title">{{this.title}}</h5>
-                    <p class="card-text" id="text">{{this.description}}</p>
-                    <p class="card-text">{{this.category}}</p>
-                    <p class="card-text">{{this.address}}</p>
-                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a>
-                   
+                    <h5 class="card-title text-left">{{this.title}}</h5>
+                    <p class="card-text text-left" id="text">{{this.description}}</p>
+                    <p class="card-text text-left">{{this.category}}</p>
+                    <p class="card-text text-left">{{this.address}}</p>
+                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary" id="more-info-btn">More Info</a>
+
 
             <form class="put_update">
-                <button class="btn btn-link like-btn" type="submit" data-id="{{this.id}}">LIKE</button> {{this.likes}} --{{this.id}}
+                <button class="btn btn-link like-btn" id="likeBtn"type="submit" data-id="{{this.id}}">LIKE</button> {{this.likes}} --{{this.id}}
             </form>
 
-
+            
 
                 </div>
 
@@ -70,6 +71,6 @@
 </div>
 {{else}}
 <div class="container text-center">
-    <h5>Sorry, nothing found by your request...</h5>
+    <p class="category-msg">Sorry, nothing found by your request...</p>
 </div>
 {{/if}}

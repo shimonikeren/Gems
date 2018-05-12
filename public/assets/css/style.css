@@ -309,13 +309,14 @@ h5 {
   border-radius: 0.625rem;
   margin-top: 10rem;
   margin-bottom: 5rem;
-  max-height: 50rem;
+  min-height: 50rem;
+  min-width: 50rem;
   max-width: 50rem;
 }
 
 #more-info-img {
   max-height: 18.625rem;
-  max-height: 18.75rem;
+  max-height: 25rem;
 
   padding: 0.625rem;
 }
@@ -348,3 +349,24 @@ color: #09cdef;
   margin-bottom: 10rem;
 }
 
+.deleteButton {
+  margin-bottom: 0.3125rem;
+  margin-left: 1.25rem;
+  font-family: Amatic SC;
+  font-size: 1.125rem;
+  color: cc0000;
+  
+}
+
+.category-msg {
+  font-family: Amatic SC;
+  color: #09cdef;
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 0rem;
+  
+}
+
+#more-info-btn {
+  float: left;
+}
