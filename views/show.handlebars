@@ -32,16 +32,14 @@
                     <button class="btn btn-outline-primary " type="submit" data-id="{{gem.id}}">See Comments</button>
                 </form>
 
-                  <form id="put_update">
-                <button class="btn btn-link" type="submit" id="like-btn" data-id="{{gem.id}}">LIKE</button> {{gem.likes}} 
+
+
+            <form class="put_update">
+                <button class="btn btn-link like-btn" type="submit" data-id="{{gem.id}}">LIKE</button> {{gem.likes}} --{{gem.id}}
+
             </form>
 
-            <form id="put_update">
-                <button class="btn btn-link" type="submit" id="dislike-btn" data-id="{{gem.id}}">DISLIKE</button> {{gem.dislikes}} 
-            </form>      
-          
-         
-         
+                
 
 
             {{/if}}
