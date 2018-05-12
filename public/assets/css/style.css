@@ -1,283 +1,292 @@
-    #nav-container {
-        margin: 0px;
-        width: 100%;
-    }
-    
-    .navbar {
-        opacity: 0.9;
-    }
-    
-    .message {
-        font-family: Amatic SC;
-        position: absolute;
-        margin: auto 0;
-    }
-    
-    .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        font-size: 20px;
-        background-color: #f5f5f5;
-        font-family: Amatic SC;
-        color: #09cdef;
-    }
-    
-    .jumbotron {
-        background-image: url(../images/muralspace.jpg);
-        background-size: cover;
-        background-position: center top;
-        height: 400px;
-        margin: 0px 0px 80px 0px;
-        text-align: center;
-    }
-    
-    #main-title {
-        font-family: Amatic SC;
-        font-size: 80px;
-        color: white;
-        font-weight: bold;
-    }
-    
-    .jumboText {
-        font-size: 30px;
-        font-family: Josefin Sans;
-        color: white;
-    }
-    
-    #card {
-        margin-bottom: 10rem;
-    }
-    
-    .eachCard {
-        margin: 40px;
-        border: 5px;
-        border-style: double;
-        border-color: #09cdef;
-        border-radius: 10px;
-        font-family: Josefin Sans;
-    }
-    
-    .img_post {
-        width: 7rem;
-    }
-    
-    .brand {
-        padding: 0px 5px 0px 5px;
-        margin-top: 5px;
-        display: inline;
-        font-family: Amatic SC;
-        font-weight: bold;
-        font-size: 40px;
-        color: #09cdef;
-        letter-spacing: 2px;
-    }
-    
-    #home:link {
-        padding: 0px 5px 0px 5px;
-        margin-top: 5px;
-        display: inline;
-        font-family: Amatic SC;
-        font-weight: bold;
-        font-size: 40px;
-        color: #09cdef;
-        letter-spacing: 2px;
-    }
-    
-    #home:visited {
-        padding: 0px 5px 0px 5px;
-        margin-top: 5px;
-        display: inline;
-        font-family: Amatic SC;
-        font-weight: bold;
-        font-size: 40px;
-        color: #09cdef;
-        letter-spacing: 2px;
-    }
-    
-    #home:hover {
-        padding: 0px 5px 0px 5px;
-        margin-top: 5px;
-        display: inline;
-        font-family: Amatic SC;
-        font-weight: bold;
-        font-size: 40px;
-        color: #09cdef;
-        letter-spacing: 2px;
-        text-decoration: none;
-    }
-    
-    #logo-left {
-        position: relative;
-        /* bottom: 10px; */
-    }
-    
-    #homeright {
-        position: relative;
-        top: 10px;
-    }
-    
-    #title {
-        position: absolute;
-        left: 50%;
-        margin-left: -50px !important;
-        display: block;
-        font-family: Amatic SC;
-        font-weight: bold;
-        font-size: 50px;
-        color: #09cdef;
-    }
-    
-    .navbar-brand {
-        font-family: Josefin Sans;
-        font-weight: bold;
-        font-size: 25px;
-        color: #09cdef;
-        letter-spacing: 2px;
-    }
-    
-    #welcome {
-        font-family: Amatic SC;
-        color: #09cdef;
-        font-weight: bold;
-        font-size: 24px;
-        letter-spacing: 2px;
-        position: relative;
-        bottom: 5px;
-    }
-    
-    .nav-link:not(#welcome):link {
-        font-family: Josefin Sans;
-        font-size: 18px;
-        color: #09cdef !important;
-        font-weight: normal;
-    }
-    
-    .nav-link:not(#welcome):visited {
-        font-family: Josefin Sans;
-        font-size: 18px;
-        color: #09cdef !important;
-        font-weight: normal;
-    }
-    
-    .nav-link:not(#welcome):hover {
-        font-family: Josefin Sans;
-        font-size: 18px;
-        color: #09cdef !important;
-        letter-spacing: 1px;
-        font-weight: normal;
-    }
-    
-    #sign-in-box {
-        border: 5px;
-        border-style: double;
-        border-color: #09cdef;
-        border-radius: 10px;
-        height: 300px;
-        width: 600px;
-        margin-top: 10rem;
-        margin-bottom: 10rem;
-    }
-    
-    #sign-up-box {
-        border: 5px;
-        border-style: double;
-        border-color: #09cdef;
-        border-radius: 10px;
-        height: 33rem;
-        width: 35rem;
-        margin-top: 10rem;
-        margin-bottom: 10rem;
-    }
-    
-    #new-in-box {
-        border: 5px;
-        border-style: double;
-        border-color: #09cdef;
-        border-radius: 10px;
-        /* height: 45rem; 
+#nav-container {
+  margin: 0px;
+  width: 100%;
+}
+
+.navbar {
+  opacity: 0.9;
+}
+
+.message {
+  font-family: Amatic SC;
+  position: absolute;
+  margin: auto 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #f5f5f5;
+  font-family: Amatic SC;
+  color: #09cdef;
+}
+
+.jumbotron {
+  background-image: url(../images/muralspace.jpg);
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
+  margin: 0px 0px 80px 0px;
+  text-align: center;
+}
+
+#main-title {
+  font-family: Amatic SC;
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+}
+
+.jumboText {
+  font-size: 30px;
+  font-family: Josefin Sans;
+  color: white;
+}
+
+#card {
+  margin-bottom: 10rem;
+}
+
+.eachCard {
+  margin: 40px;
+  border: 5px;
+  border-style: double;
+  border-color: #09cdef;
+  border-radius: 10px;
+  font-family: Josefin Sans;
+}
+
+.img_post {
+  width: 7rem;
+}
+
+.brand {
+  padding: 0px 5px 0px 5px;
+  margin-top: 5px;
+  display: inline;
+  font-family: Amatic SC;
+  font-weight: bold;
+  font-size: 40px;
+  color: #09cdef;
+  letter-spacing: 2px;
+}
+
+#home:link {
+  padding: 0px 5px 0px 5px;
+  margin-top: 5px;
+  display: inline;
+  font-family: Amatic SC;
+  font-weight: bold;
+  font-size: 40px;
+  color: #09cdef;
+  letter-spacing: 2px;
+}
+
+#home:visited {
+  padding: 0px 5px 0px 5px;
+  margin-top: 5px;
+  display: inline;
+  font-family: Amatic SC;
+  font-weight: bold;
+  font-size: 40px;
+  color: #09cdef;
+  letter-spacing: 2px;
+}
+
+#home:hover {
+  padding: 0px 5px 0px 5px;
+  margin-top: 5px;
+  display: inline;
+  font-family: Amatic SC;
+  font-weight: bold;
+  font-size: 40px;
+  color: #09cdef;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+#logo-left {
+  position: relative;
+  /* bottom: 10px; */
+}
+
+#homeright {
+  position: relative;
+  top: 10px;
+}
+
+#title {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;
+  display: block;
+  font-family: Amatic SC;
+  font-weight: bold;
+  font-size: 50px;
+  color: #09cdef;
+}
+
+.navbar-brand {
+  font-family: Josefin Sans;
+  font-weight: bold;
+  font-size: 25px;
+  color: #09cdef;
+  letter-spacing: 2px;
+}
+
+#welcome {
+  font-family: Amatic SC;
+  color: #09cdef;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 2px;
+  position: relative;
+  bottom: 5px;
+}
+
+.nav-link:not(#welcome):link {
+  font-family: Josefin Sans;
+  font-size: 18px;
+  color: #09cdef !important;
+  font-weight: normal;
+}
+
+.nav-link:not(#welcome):visited {
+  font-family: Josefin Sans;
+  font-size: 18px;
+  color: #09cdef !important;
+  font-weight: normal;
+}
+
+.nav-link:not(#welcome):hover {
+  font-family: Josefin Sans;
+  font-size: 18px;
+  color: #09cdef !important;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+#sign-in-box {
+  border: 5px;
+  border-style: double;
+  border-color: #09cdef;
+  border-radius: 10px;
+  height: 300px;
+  width: 600px;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+#sign-up-box {
+  border: 5px;
+  border-style: double;
+  border-color: #09cdef;
+  border-radius: 10px;
+  height: 33rem;
+  width: 35rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+#new-in-box {
+  border: 5px;
+  border-style: double;
+  border-color: #09cdef;
+  border-radius: 10px;
+  /* height: 45rem; 
     width: 35rem;  */
-        margin-top: 10rem;
-        margin-bottom: 10rem;
-    }
-    
-    #sign-in-header {
-        font-family: Amatic SC;
-        font-size: 50px;
-        font-weight: bold;
-        color: #09cdef;
-        width: 50%;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    .logins {
-        font-family: Josefin Sans;
-        font-size: 1em;
-        color: #09cdef;
-    }
-    
-    #login-btn-parent {
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    .btn-outline-primary {
-        background: #09cdef;
-        color: #fff;
-        border: none;
-        position: relative;
-        height: 50px;
-        font-size: 1.6em;
-        font-family: Amatic SC;
-        color: white;
-        padding: 0 2em;
-        cursor: pointer;
-        transition: 800ms ease all;
-        outline: none;
-    }
-    
-    .btn-outline-primary:hover {
-        background: #fff;
-        color: #09cdef;
-    }
-    
-    .btn-outline-primary:before,
-    .btn-outline-primary:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 2px;
-        width: 0;
-        background: #09cdef;
-        transition: 400ms ease all;
-    }
-    
-    .btn-outline-primary:after {
-        right: inherit;
-        top: inherit;
-        left: 0;
-        bottom: 0;
-    }
-    
-    .btn-outline-primary:hover:before,
-    .btn-outline-primary:hover:after {
-        width: 100%;
-        transition: 800ms ease all;
-    }
-    
-    .carousel-inner,
-    .item {
-        width: 100%;
-        height: 20rem;
-    }
-    
-    */
-    /*h5 
-    text-align: left;
-}*/
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+#sign-in-header {
+  font-family: Amatic SC;
+  font-size: 50px;
+  font-weight: bold;
+  color: #09cdef;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.logins {
+  font-family: Josefin Sans;
+  font-size: 1em;
+  color: #09cdef;
+}
+
+#login-btn-parent {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-outline-primary {
+  background: #09cdef;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 50px;
+  font-size: 1.6em;
+  font-family: Amatic SC;
+  color: white;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+.btn-outline-primary:hover {
+  background: #fff;
+  color: #09cdef;
+}
+
+.btn-outline-primary:before,
+.btn-outline-primary:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #09cdef;
+  transition: 400ms ease all;
+}
+
+.btn-outline-primary:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-outline-primary:hover:before,
+.btn-outline-primary:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+.carousel-inner,
+.item {
+  width: 100%;
+  height: 20rem;
+}
+
+h5 {
+  text-align: left;
+}
+
+#text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-img-top {
+  height: 40%;
+}
