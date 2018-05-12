@@ -39,19 +39,37 @@
 <div class="container" id="">
     <div class="row text-center cardContainer" id="card">
         {{#each gems}}
-        <div class="col-xs-4 eachCard">
-            <div class="card h-100" style="width: 18rem;">
-                <img class="card-img-top" src="{{this.image}}" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">{{this.title}}</h5>
-                    <p class="card-text" id="text">{{this.description}}</p>
-                    <p class="card-text">{{this.category}}</p>
-                    <p class="card-text">{{this.address}}</p>
-                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a>
-                    {{!--
-                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a> --}}
+            <div class="col-xs-4 eachCard">     
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{this.image}}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                        <p class="card-text">{{this.category}}</p>
+                        <p class="card-text">{{this.address}}</p>
+                        <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a>
+                        {{!-- <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a> --}}
+                    </div>
+                      
+
                 </div>
+              
+            <button type="button" class="btn btn-link"i id="like-btn" value="{{this.id}}">
+              <span class="like">Like
+              </span>
+              
+              <span class="count">{{this.likes}}</span>
+            </button>
+          
+            <button type="button" class="btn btn-link"  id="dislike-btn" data-id="{{this.id}}">
+              <span class="dislike">Dislike</span>
+              <span class="like">
+               
+              </span>
+              <span class="count">{{this.dislikes}}</span>
+            </button>
             </div>
+
         </div>
         {{/each}}
     </div>
