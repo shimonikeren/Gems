@@ -1,26 +1,24 @@
 <div class="container">
-     {{#if comments}} 
-     {{#each comments}}
-<div class="card" style="width: 45rem;">
-    <div class="card-header">
-        {{this.id}}
-        
+    {{#if comments}} {{#each comments}}
+    <div class="card commentCard" style="width: 45rem;">
+        <div class="card-header">
+            {{this.id}}
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{this.Comment}}</li>
+            <li class="list-group-item">{{this.createdAt}}</li>
+            <li class="list-group-item">{{this.UserPostId}}</li>
+
+        </ul>
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{this.Comment}}</li>
-        <li class="list-group-item">{{this.createdAt}}</li>
-        <li class="list-group-item">{{this.UserPostId}}</li>
-        
-    </ul>
-</div>
-<div class="form-group">
-    <a href="/gems/{{this.UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>
-    <p></p>
-    {{else}}
-    <p>No Comments{{this.UserPostId}}</p>{{this.UserPostId}}
-    {{/each }} {{/if}}
-    <p></p>
-    
-    <button id="login-btn" type="submit" class="btn btn-outline-primary">Back</button>
-</div>
+    <div class="form-group">
+        <a href="/gems/{{this.UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>
+        <p></p>
+        {{else}}
+        <p>No Comments{{this.UserPostId}}</p>{{this.UserPostId}} {{/each }} {{/if}}
+        <p></p>
+
+        <button id="login-btn" type="submit" class="btn btn-outline-primary">Back</button>
+    </div>
 </div>

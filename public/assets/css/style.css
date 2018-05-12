@@ -365,3 +365,13 @@ h5 {
   margin-top: auto;
   margin-bottom: auto;
 }
+.commentCard {
+  border: 0.3125rem;
+  border-style: double;
+  border-color: #09cdef;
+  border-radius: 0.625rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  max-height: 50rem;
+  max-width: 50rem;
+}
