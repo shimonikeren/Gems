@@ -51,7 +51,7 @@ module.exports = (app) => {
                     UserId: req.user.id,
                     UserPostId: req.params.id
                 }).then((comments) => {
-                    res.json(comments)
+                    //res.json(comments)
 
                     res.render('comments', { user: req.user, comments: comments })
                     console.log("com" + comments.User)
