@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": "git+https://github.com/Project-2-Node-Express/noname.git",
   "author": "yelena guliyeva <gulbadam@gulbadam.com>",
@@ -15,11 +15,14 @@
   "homepage": "https://github.com/Project-2-Node-Express/noname#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "mocha": "^5.1.1",
     "mysql2": "^1.5.3",
+    "nightmare": "^3.0.1",
     "nodemon": "^1.17.4",
     "passport": "^0.4.0",
     "passport-local-sequelize": "^0.8.0",
