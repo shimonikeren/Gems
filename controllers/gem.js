@@ -7,7 +7,9 @@ const POST_ATTR = [
     'address',
     'description',
     'image',
-    'createdAt'
+    'createdAt',
+    'likes',
+    'dislikes'
 ];
 module.exports = (app) => {
     app.post("/newgem", (req, res) => {
@@ -182,6 +184,38 @@ module.exports = (app) => {
             res.status(200).send();
 
         })
+
+    })
+    app.put("/gems/vote/like/:id", (req, res) => {
+
+        let val = 1;
+
+
+        db.UserPosts.update({
+            likes: db.sequelize.literal("likes + 1")
+        }, {
+            where: { id: req.params.id }
+        }).then((result) => {
+            res.status(200).send();
+        })
+
+
+    })
+    app.put("/gems/vote/dislike/:id", (req, res) => {
+
+        let val = 1;
+
+
+        db.UserPosts.update({
+            likes: db.sequelize.literal("dislikes + 1")
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }).then((result) => {
+            res.status(200).send();
+        })
+
 
     })
 }

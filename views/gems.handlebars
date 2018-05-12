@@ -51,8 +51,25 @@
                         <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a>
                         {{!-- <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a> --}}
                     </div>
+                      
                 </div>
+              
+            <button type="button" class="btn btn-link"i id="like-btn" value="{{this.id}}">
+              <span class="like">Like
+              </span>
+              
+              <span class="count">{{this.likes}}</span>
+            </button>
+          
+            <button type="button" class="btn btn-link"  id="dislike-btn" data-id="{{this.id}}">
+              <span class="dislike">Dislike</span>
+              <span class="like">
+               
+              </span>
+              <span class="count">{{this.dislikes}}</span>
+            </button>
             </div>
+          
         {{/each}}
         </div>
 </div>
