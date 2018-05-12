@@ -26,23 +26,21 @@
                 </div>
                 <button id="login-btn" type="submit" class="btn btn-outline-primary">Submit!</button>
             </form>
-            <button type="submit" class="btn btn-link" id="like-btn" data-id="{{gem.id}}">
-                <span class="like">Like
-                </span>
+
                 <form action="/gems/comments/{{gem.id}}/all" method="GET">
                     <button class="btn btn-outline-primary " type="submit" data-id="{{gem.id}}">See Comments</button>
                 </form>
-            
-                <span class="count">{{gem.likes}}</span>
-            </button>
-            
-            <button type="submit" class="btn btn-link" id="dislike-btn" data-id="{{gem.id}}">
-                <span class="dislike">Dislike</span>
-                <span class="like">
-            
-                </span>
-                <span class="count">{{gem.dislikes}}</span>
-            </button>
+                  <form id="put_update">
+                <button class="btn btn-link" type="submit" id="like-btn" data-id="{{gem.id}}">LIKE</button> {{gem.likes}} 
+            </form>
+
+            <form id="put_update">
+                <button class="btn btn-link" type="submit" id="dislike-btn" data-id="{{gem.id}}">DISLIKE</button> {{gem.dislikes}} 
+            </form>      
+          
+         
+         
+
             {{/if}}
             
 
