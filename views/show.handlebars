@@ -20,21 +20,16 @@
                 <div class="form-group">
                     <p>Add Comment:
                         <p>
-                            <input class="form-control" type="text" name="comment" palseholder="text">
+                            <input class="form-control" type="text" name="commenet" palseholder="text">
                 </div>
-                <div class="form-group">
-                    {{#if comments}}
-                    {{#each comments}}
-                    <p>{{Comment}}</p>
-                    {{/each }}
-                    {{/if}}
-                    <p></p>
-                    <button id="login-btn" type="submit" class="btn btn-outline-primary">Submit!</button>
-                </div>
+                <button id="login-btn" type="submit" class="btn btn-outline-primary">Submit!</button>
             </form>
             <button type="submit" class="btn btn-link" id="like-btn" data-id="{{gem.id}}">
                 <span class="like">Like
                 </span>
+                <form action="/gems/comments/{{gem.id}}/all" method="GET">
+                    <button class="btn btn-outline-primary " type="submit" data-id="{{gem.id}}">See Comments</button>
+                </form>
             
                 <span class="count">{{gem.likes}}</span>
             </button>

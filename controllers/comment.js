@@ -11,16 +11,17 @@ const POST_ATTR = [
 ];
 const COMM_ATTR = ['id', 'Comment', 'createdAt', 'updatedAt', 'UserId', 'UserPostId'];
 module.exports = (app) => {
-    app.get('/gems/comments/:id', (req, res) => {
+    app.get('/gems/comments/:id/all', (req, res) => {
         db.Comments.findAll({
-            where: { UserPostId: req.param.id },
+            where: { UserPostId: req.params.id },
             include: [{
                 model: db.UserPosts,
                 attributes: POST_ATTR
             }]
         }).then((comments) => {
             if (comments) {
-                res.render("show")
+
+                res.render("comments", { comments: comments })
             }
         })
     })
@@ -28,26 +29,37 @@ module.exports = (app) => {
 
 
         if (req.user) {
+            db.UserPosts.findOne({
+                where: { id: req.params.id },
+                include: [{
+                    model: db.User,
+                    attributes: USER_ATTR
+                }]
+            }).then((gem) => {
 
 
 
-            //let Comments = {
-            // Comment: req.body,
-            // userPostId: req.params.id,
-            // UserId: req.userId
-            //};
+                //let Comments = {
+                // Comment: req.body,
+                // userPostId: req.params.id,
+                // UserId: req.userId
+                //};
 
 
-            db.Comments.create({
-                Comment: req.body.comment,
-                UserId: req.user.id,
-                UserPostId: req.params.id
-            }).then((comments) => {
-                res.render('show', { user: req.user, comments: comments })
-            }).catch((error) => {
-                res.json({
-                    msg: error.message
-                });
+                db.Comments.create({
+                    Comment: req.body.comment,
+                    UserId: req.user.id,
+                    UserPostId: req.params.id
+                }).then((comments) => {
+                    res.json(comments)
+
+                    res.render('comments', { user: req.user, comments: comments })
+                    console.log("com" + comments.User)
+                }).catch((error) => {
+                    res.json({
+                        msg: error.message
+                    });
+                })
             })
         } else {
             res.status(404).send()
