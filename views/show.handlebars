@@ -1,14 +1,16 @@
-<div class="container">
-   <div class="row justify-content-center align-items-center text-center">
-        <div class="card" style="width: 40rem;">
-            <img class="card-img-top" src="{{gem.image}}" alt="Card image cap">
+
+<div class="container ">
+    <div class="row justify-content-center align-items-center text-center">
+        <div class="card" id="more-info-card" style="width: 55rem;">
+
+            <img class="card-img-top" id="more-info-img" src="{{gem.image}}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{gem.title}}</h5>
-                <p class="card-text">{{gem.description}}</p>
+                <h5 class="card-title" id="more-info-title">{{gem.title}}</h5>
+                <p class="card-text" id="more-info-description">{{gem.description}}</p>
                 <p class="card-text">
                     <spam>Address:</spam> {{gem.address}}</p>
-                <p class="card-text">
-                    <spam>Author:</spam> {{gem.User.username}}</p>
+                <p class="card-text sub">
+                    <spam>Added by:</spam> {{gem.User.username}}</p>
             </div>
             {{#if user.owner}}
             <form id="post_delete">
