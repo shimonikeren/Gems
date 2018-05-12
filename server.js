@@ -29,6 +29,7 @@ passport.deserializeUser(db.User.deserializeUser());
 require("./controllers/http-routes.js")(app);
 require("./controllers/signup.js")(app);
 require("./controllers/gem.js")(app);
+require("./controllers/comment")(app);
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
