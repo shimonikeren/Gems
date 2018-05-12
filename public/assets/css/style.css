@@ -277,6 +277,10 @@
   height: 20rem;
 }
 
+.carousel {
+  margin-top: 5rem;
+}
+
 h5 {
   text-align: left;
 }
@@ -289,9 +293,10 @@ h5 {
 
 .card-img-top {
   height: 40%;
+  padding: 10px;
 }
 
-#gem-card{
+#gem-card {
   max-width: 298px;
   max-height: 451px;
 }
@@ -302,7 +307,7 @@ h5 {
   border-color: #09cdef;
   border-radius: 10px;
   margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   max-height: 800px;
   max-width: 800px;
 }
@@ -310,4 +315,35 @@ h5 {
 #more-info-img {
   max-height: 298px;
   max-height: 300px;
+
+  padding: 10px;
 }
+
+#more-info-title {
+font-family: Amatic SC;
+font-size: 50px;
+color: #09cdef;
+
+}
+
+#more-info-location {
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-weight: bold;
+  color: #09cdef;
+}
+#more-info-description {
+  font-family: Josefin Sans;
+  font-size: 18px;
+  color: #09cdef;
+}
+
+.sub {
+
+}
+
+#comments {
+  width: 800px;
+  margin-bottom: 10rem;
+}
+
