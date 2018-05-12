@@ -39,18 +39,18 @@
 <div class="container" id="">
     <div class="row text-center cardContainer" id="card">
         {{#each gems}}
-            <div class="col-xs-4 eachCard">     
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{this.image}}" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">{{this.title}}</h5>
-                        <p class="card-text">{{this.description}}</p>
-                        <p class="card-text">{{this.category}}</p>
-                        <p class="card-text">{{this.address}}</p>
-                        <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a>
-                        {{!-- <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a> --}}
-                    </div>
-                      
+
+        <div class="col-xs-4 eachCard">
+            <div class="card h-100" id="gem-card" style="width: 18rem;">
+                <img class="card-img-top" src="{{this.image}}" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+                    <p class="card-text" id="text">{{this.description}}</p>
+                    <p class="card-text">{{this.category}}</p>
+                    <p class="card-text">{{this.address}}</p>
+                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a>
+                    {{!--
+                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary">More Info</a> --}}
 
                 </div>
               
