@@ -6,18 +6,19 @@
             <img class="card-img-top" id="more-info-img" src="{{gem.image}}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title" id="more-info-title">{{gem.title}}</h5>
-                <p class="card-text" id="more-info-description">{{gem.description}}</p>
-                <p class="card-text">
-                    <spam>Address:</spam> {{gem.address}}</p>
-                <p class="card-text sub">
+                <p class="card-text text-left" id="more-info-location"> {{gem.address}}</p>
+                <p class="card-text text-left" id="more-info-description">{{gem.description}}</p>
+                
+                <p class="card-text sub text-left">
                     <spam>Added by:</spam> {{gem.User.username}}</p>
             </div>
             {{#if user.owner}}
             <form id="post_delete">
                 <button class="btn btn-xs btn-danger deleteButton" type="submit" data-id="{{gem.id}}">DELETE</button>
             </form>
+            </div>
             {{/if}} {{#if user}}
-            
+            <div class="container" id="comments">
             <form action="/gems/comments/{{gem.id}}/add" method="POST">
                 <div class="form-group">
                     <p>Add Comment:
@@ -30,6 +31,7 @@
                 <form action="/gems/comments/{{gem.id}}/all" method="GET">
                     <button class="btn btn-outline-primary " type="submit" data-id="{{gem.id}}">See Comments</button>
                 </form>
+
                   <form id="put_update">
                 <button class="btn btn-link" type="submit" id="like-btn" data-id="{{gem.id}}">LIKE</button> {{gem.likes}} 
             </form>
@@ -40,6 +42,7 @@
           
          
          
+
 
             {{/if}}
             
