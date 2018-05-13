@@ -11,7 +11,8 @@ const POST_ATTR = [
 ];
 const COMM_ATTR = ['id', 'Comment', 'createdAt', 'updatedAt', 'UserId', 'UserPostId'];
 module.exports = (app) => {
-    app.get('/gems/comments/:id/all', (req, res) => {
+    app.get('/comments/:id/all', (req, res) => {
+        let curPostId = req.params.id
         db.Comments.findAll({
             where: { UserPostId: req.params.id },
             include: [{
@@ -21,11 +22,13 @@ module.exports = (app) => {
         }).then((comments) => {
             if (comments) {
 
-                res.render("comments", { comments: comments })
+                res.render("comments", { comments: comments, curPostId: curPostId })
             }
         })
     })
-    app.post("/gems/comments/:id/add", (req, res) => {
+    app.post("/comments/:id/add", (req, res) => {
+        let curPostId = req.params.id
+
 
 
         if (req.user) {
@@ -53,17 +56,44 @@ module.exports = (app) => {
                 }).then((comments) => {
                     //res.json(comments)
 
-                    res.render('comments', { user: req.user, comments: comments })
-                    console.log("com" + comments.User)
-                }).catch((error) => {
-                    res.json({
-                        msg: error.message
-                    });
+                    //res.render('comments', {
+                    //user: req.user,
+                    //comments: comments,
+                    db.Comments.findAll({
+                        where: {
+                            UserPostId: req.params.id
+                        },
+                        include: [{
+                            model: db.UserPosts,
+                            attributes: POST_ATTR
+                        }, {
+                            model: db.User,
+                            attributes: USER_ATTR
+                        }]
+                    }).then((comments) => {
+                        res.render("comments", {
+                                comments: comments,
+                                curPostId: curPostId
+                            })
+                            //res.json(comments)
+
+                    })
+
+
                 })
             })
+
+
         } else {
-            res.status(404).send()
+            //res.status(404).send()
         }
+
+
+
+
+
+
+
 
     })
 

@@ -92,8 +92,9 @@ module.exports = (app) => {
                         console.log(gem.UserId)
                         console.log(req.user.id)
                         res.render("show", {
-                            gem: gem,
-                            user: author
+                            user: author,
+                            gem: gem
+
                         })
                         console.log(gem.User)
                     } else {
@@ -139,7 +140,7 @@ module.exports = (app) => {
             res.render("gems", {
                 user: req.user,
                 gems: gems,
-                msg: "Outdoots"
+                msg: "Outdoors"
             })
 
         })
