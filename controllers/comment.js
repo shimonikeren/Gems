@@ -11,7 +11,7 @@ const POST_ATTR = [
 ];
 const COMM_ATTR = ['id', 'Comment', 'createdAt', 'updatedAt', 'UserId', 'UserPostId'];
 module.exports = (app) => {
-    app.get('/gems/comments/:id/all', (req, res) => {
+    app.get('/comments/:id/all', (req, res) => {
         db.Comments.findAll({
             where: { UserPostId: req.params.id },
             include: [{
@@ -25,7 +25,7 @@ module.exports = (app) => {
             }
         })
     })
-    app.post("/gems/comments/:id/add", (req, res) => {
+    app.post("/comments/:id/add", (req, res) => {
 
 
         if (req.user) {
@@ -53,8 +53,12 @@ module.exports = (app) => {
                 }).then((comments) => {
                     //res.json(comments)
 
-                    res.render('comments', { user: req.user, comments: comments })
-                    console.log("com" + comments.User)
+                    res.render('comments', {
+                        user: req.user,
+                        comments: comments,
+                        UserPostId: comments.UserPostId
+                    })
+                    console.log("com" + comments)
                 }).catch((error) => {
                     res.json({
                         msg: error.message

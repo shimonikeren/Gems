@@ -14,13 +14,17 @@
     </ul>
 </div>
 <div class="form-group">
-    <a href="/gems/{{this.UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>
+    {{!--<a href="/gems/{{this.UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>--}}
     <p></p>
     {{else}}
-    <p>No Comments{{this.UserPostId}}</p>{{this.UserPostId}}
+    <p>No Comments{{comments.UserPostId}}</p>{{this.UserPostId}}
     {{/each }} {{/if}}
     <p></p>
+    {{#if UserPostId }}
+     <p> USER POST ID  {{UserPostId}}</p>
+    <a href="/gems/{{UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>
+    {{/if}}
     
-    <button id="login-btn" type="submit" class="btn btn-outline-primary">Back</button>
+<a href="/gems/all" class="btn btn-primary btn-outline-primary">Back</a>
 </div>
 </div>

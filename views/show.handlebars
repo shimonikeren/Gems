@@ -19,7 +19,7 @@
             </div>
             {{/if}} {{#if user}}
             <div class="container" id="comments">
-            <form action="/gems/comments/{{gem.id}}/add" method="POST">
+            <form action="/comments/{{gem.id}}/add" method="POST">
                 <div class="form-group">
                     <p>Add Comment:
                         <p>
@@ -28,7 +28,7 @@
                 <button id="login-btn" type="submit" class="btn btn-outline-primary">Submit!</button>
             </form>
 
-                <form action="/gems/comments/{{gem.id}}/all" method="GET">
+                <form action="/comments/{{gem.id}}/all" method="GET">
                     <button class="btn btn-outline-primary " type="submit" data-id="{{gem.id}}">See Comments</button>
                 </form>
 
