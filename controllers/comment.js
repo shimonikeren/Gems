@@ -22,15 +22,16 @@ module.exports = (app) => {
         }).then((comments) => {
             if (comments) {
 
-                res.render("comments", { comments: comments, curPostId: curPostId })
+                res.render("comments", {
+                    comments: comments,
+                    curPostId: curPostId,
+                    user: req.user,
+                })
             }
         })
     })
     app.post("/comments/:id/add", (req, res) => {
         let curPostId = req.params.id
-
-
-
         if (req.user) {
             db.UserPosts.findOne({
                 where: { id: req.params.id },
@@ -39,26 +40,12 @@ module.exports = (app) => {
                     attributes: USER_ATTR
                 }]
             }).then((gem) => {
-
-
-
-                //let Comments = {
-                // Comment: req.body,
-                // userPostId: req.params.id,
-                // UserId: req.userId
-                //};
-
-
                 db.Comments.create({
                     Comment: req.body.comment,
                     UserId: req.user.id,
                     UserPostId: req.params.id
                 }).then((comments) => {
                     //res.json(comments)
-
-                    //res.render('comments', {
-                    //user: req.user,
-                    //comments: comments,
                     db.Comments.findAll({
                         where: {
                             UserPostId: req.params.id
@@ -73,7 +60,8 @@ module.exports = (app) => {
                     }).then((comments) => {
                         res.render("comments", {
                                 comments: comments,
-                                curPostId: curPostId
+                                curPostId: curPostId,
+                                user: req.user,
                             })
                             //res.json(comments)
 
@@ -85,16 +73,8 @@ module.exports = (app) => {
 
 
         } else {
-            //res.status(404).send()
+            res.status(404).send()
         }
-
-
-
-
-
-
-
-
     })
 
 }
