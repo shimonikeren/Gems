@@ -4,15 +4,15 @@
 <div class="box container" id ="sign-up-box">
     <h3 id="sign-in-header">Sign Up</h3>
     <form id="signup" name="signup" method="post" action="/signup">
-        <input id="add-email" class="form-control form-control-lg" name="email" type="email" placeholder="Email"/>
+        <input id="add-email" class="form-control form-control-lg" name="email" type="email" placeholder="Email" required="required"/>
         <br>
-        <input id="add-first" class="form-control form-control-lg" name="firstname" type="text" placeholder="First Name" />
+        <input id="add-first" class="form-control form-control-lg" name="firstname" type="text" placeholder="First Name" required="required"/>
         <br>
-        <input id="add-last" class="form-control form-control-lg" name="lastname" type="text" placeholder="Last Name" />
+        <input id="add-last" class="form-control form-control-lg" name="lastname" type="text" placeholder="Last Name" required="required"/>
         <br>
-        <input id="add-username" class="form-control form-control-lg" name="username" type="text" placeholder="Username"/>
+        <input id="add-username" class="form-control form-control-lg" name="username" type="text" placeholder="Username" required="required"/>
         <br>
-        <input id="add-password" class="form-control form-control-lg" name="password" type="password" placeholder="Password"/>
+        <input id="add-password" class="form-control form-control-lg" name="password" type="password" placeholder="Password" required="required"/>
         <br>
         <div id="login-btn-parent">
             <button id="sign-up" type="submit" class="btn btn-outline-primary" value="Sign Up">Sign Up</button>
