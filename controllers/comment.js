@@ -26,6 +26,8 @@ module.exports = (app) => {
         })
     })
     app.post("/comments/:id/add", (req, res) => {
+        let curPostId = req.params.id
+
 
 
         if (req.user) {
@@ -53,21 +55,44 @@ module.exports = (app) => {
                 }).then((comments) => {
                     //res.json(comments)
 
-                    res.render('comments', {
-                        user: req.user,
-                        comments: comments,
-                        UserPostId: comments.UserPostId
+                    //res.render('comments', {
+                    //user: req.user,
+                    //comments: comments,
+                    db.Comments.findAll({
+                        where: {
+                            UserPostId: req.params.id
+                        },
+                        include: [{
+                            model: db.UserPosts,
+                            attributes: POST_ATTR
+                        }, {
+                            model: db.User,
+                            attributes: USER_ATTR
+                        }]
+                    }).then((comments) => {
+                        res.render("comments", {
+                                comments: comments,
+                                curPostId: curPostId
+                            })
+                            //res.json(comments)
+
                     })
-                    console.log("com" + comments)
-                }).catch((error) => {
-                    res.json({
-                        msg: error.message
-                    });
+
+
                 })
             })
+
+
         } else {
-            res.status(404).send()
+            //res.status(404).send()
         }
+
+
+
+
+
+
+
 
     })
 

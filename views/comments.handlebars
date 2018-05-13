@@ -3,13 +3,13 @@
      {{#each comments}}
 <div class="card" style="width: 45rem;">
     <div class="card-header">
-        {{this.id}}
+        {{this.User.username}}
         
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">{{this.Comment}}</li>
         <li class="list-group-item">{{this.createdAt}}</li>
-        <li class="list-group-item">{{this.UserPostId}}</li>
+        
         
     </ul>
 </div>
@@ -17,12 +17,12 @@
     {{!--<a href="/gems/{{this.UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>--}}
     <p></p>
     {{else}}
-    <p>No Comments{{comments.UserPostId}}</p>{{this.UserPostId}}
+    <p>No Comments</p>
     {{/each }} {{/if}}
     <p></p>
-    {{#if UserPostId }}
-     <p> USER POST ID  {{UserPostId}}</p>
-    <a href="/gems/{{UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>
+    {{#if curPostId }}
+     <p> USER POST ID  {{curPostId}}</p>
+    <a href="/gems/{{curPostId}}" class="btn btn-primary btn-outline-primary">Back</a>
     {{/if}}
     
 <a href="/gems/all" class="btn btn-primary btn-outline-primary">Back</a>
