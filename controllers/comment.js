@@ -12,6 +12,7 @@ const POST_ATTR = [
 const COMM_ATTR = ['id', 'Comment', 'createdAt', 'updatedAt', 'UserId', 'UserPostId'];
 module.exports = (app) => {
     app.get('/comments/:id/all', (req, res) => {
+        let curPostId = req.params.id
         db.Comments.findAll({
             where: { UserPostId: req.params.id },
             include: [{
@@ -21,7 +22,7 @@ module.exports = (app) => {
         }).then((comments) => {
             if (comments) {
 
-                res.render("comments", { comments: comments })
+                res.render("comments", { comments: comments, curPostId: curPostId })
             }
         })
     })
