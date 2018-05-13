@@ -1,6 +1,7 @@
 var Nightmare = require("nightmare");
 var expect = require("chai").expect;
 
+//-------------------- test landing page -----------------
 describe("Gems", function() {
   this.timeout(30000);
   it("should send user to home page", function(done) {
@@ -16,6 +17,7 @@ describe("Gems", function() {
       });
   });
 
+//---------------- test login functionality ------------------
   it("should log user in", function(done) {
     new Nightmare({ show: true })
       .goto("http://localhost:8080/login")
@@ -33,3 +35,6 @@ describe("Gems", function() {
 
   
 });
+
+
+//dev comment: both tests are passing 
