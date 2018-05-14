@@ -2,7 +2,7 @@
 ## *insert catchphrase here*
 place description here
 
-![Gem Logo](/public/assets/images/gemTeal.jpeg) 
+![Gem Logo](/public/assets/images/gemSac.png) 
 
 **Link to App Demo** 
 [Click Here](https://salty-dusk-63222.herokuapp.com/gems/all)
