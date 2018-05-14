@@ -61,7 +61,18 @@ https: //drive.google.com/file/d/1wcsKn4eNrm9h4kZRi5gQTrOTxEcTDYH5/view?usp=shar
     border-color: #09cdef;
     border-radius: 0.625rem;
     font-family: Josefin Sans;
-    height: 35rem;
+    height: 32rem;
+}
+
+.card-img-top {
+  height: 40%;
+  padding: 0.625rem;
+  object-fit: contain;
+}
+
+#gem-card {
+max-width: 18.625rem;
+max-height: 32rem;
 }
 
 .img_post {
@@ -227,6 +238,10 @@ https: //drive.google.com/file/d/1wcsKn4eNrm9h4kZRi5gQTrOTxEcTDYH5/view?usp=shar
     text-align: center;
     margin: 0 auto;
 }
+#login-btn {
+  position: relative;
+  bottom: 1.25rem;
+}
 
 .btn-outline-primary {
     background: #09cdef;
@@ -294,15 +309,7 @@ h5 {
     text-overflow: ellipsis;
 }
 
-.card-img-top {
-    height: 40%;
-    padding: 0.625rem;
-}
 
-#gem-card {
-    max-width: 18.625rem;
-    max-height: 28.1875rem;
-}
 
 #more-info-card {
     border: 0.3125rem;
@@ -317,6 +324,9 @@ h5 {
 }
 
 #more-info-img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
     max-height: 18.625rem;
     max-height: 25rem;
     padding: 0.625rem;
@@ -427,3 +437,22 @@ h5 {
 }
 
 #comment-input {}
+
+.added-by {
+  font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef;
+}
+
+.dropdown-item {
+  font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef;
+}
+
+.dropdown-item:hover {
+  font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef;
+    letter-spacing: .125rem;
+}
