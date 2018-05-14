@@ -16,8 +16,6 @@ module.exports = (app) => {
 
         if (req.user) {
             let post = req.body;
-            //console.log("gem  " + req.body);
-            //console.log(res.json(req.body))
             post.UserId = req.user.id;
             db.UserPosts.create(post).then((gem) => {
                 res.render('show', {
@@ -45,7 +43,6 @@ module.exports = (app) => {
 
             } else {
                 res.render("gems", { user: req.user, gems: gems })
-                console.log(gems)
             }
         })
     });
@@ -91,15 +88,11 @@ module.exports = (app) => {
 
                         let author = req.user;
                         author.owner = true;
-                        console.log(author)
-                        console.log(gem.UserId)
-                        console.log(req.user.id)
                         res.render("show", {
                             user: author,
                             gem: gem
 
                         })
-                        console.log(gem.User)
                     } else {
                         res.render("show", {
                             user: req.user,
@@ -121,7 +114,6 @@ module.exports = (app) => {
     })
 
     app.get("/gems/category/art", (req, res) => {
-        console.log("Art Route");
         db.UserPosts.findAll({
             where: { category: "Art" }
         }).then((gems) => {
@@ -134,7 +126,6 @@ module.exports = (app) => {
         })
     })
     app.get("/gems/category/outdoors", (req, res) => {
-        console.log("Art Route");
         db.UserPosts.findAll({
             where: {
                 category: "Outdoors"
