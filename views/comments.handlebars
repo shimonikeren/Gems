@@ -2,7 +2,7 @@
 <div class="container comment-list">
      {{#if comments}} 
         {{#each comments}}
-        <div class="card commentCard" style="width: 45rem;">
+        <div class="card commentCard" {{!style="width: 45rem;"!}}>
             <div class="card-header">
                 {{this.User.username}}
             </div>
