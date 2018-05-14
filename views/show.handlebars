@@ -10,7 +10,9 @@
                 <p class="card-text text-left" id="more-info-description">{{gem.description}}</p>
                 
                 <p class="card-text sub text-left">
+                    {{#if gem.User.username}}
                     <spam>Added by:</spam> {{gem.User.username}}</p>
+                    {{/if}}
             </div>
             {{#if user.owner}}
             <form id="post_delete">
@@ -23,30 +25,36 @@
                 <div class="form-group">
                     <p>Add Comment:
                         <p>
-                    <input class="form-control" type="text" name="comment" palseholder="text" required="required">
+                    <input class="form-control" type="text" name="comment" palseholder="text" required>
+
                 </div>
-                <button id="login-btn" type="submit" class="btn btn-outline-primary">Submit!</button>
+                <button  type="submit" class="btn btn-outline-primary comment-btn">Submit Comment!</button>
             </form>
 
                 <form action="/comments/{{gem.id}}/all" method="GET">
-                    <button class="btn btn-outline-primary " type="submit" data-id="{{gem.id}}">See Comments</button>
+                    <button class="btn btn-outline-primary comment-btn " type="submit" data-id="{{gem.id}}">See All Comments</button>
                 </form>
 
-
-
+{{/if}}
+             {{#if gem.User.username}}
+             <div class="container justify-content-md-center">
+             <div class="row justify-content-md-center">
             <form class="put_update">
-                <button class="btn btn-link like-btn" type="submit" data-id="{{gem.id}}">LIKE</button> {{gem.likes}} 
+                <button class="btn btn-link like-btn " type="submit" data-id="{{gem.id}}">LIKE</button> <p class="count-lk">{{gem.likes}}</p>
 
             </form>
 
             <form class="put_update">
-                <button class="btn btn-link dislike-btn" type="submit" data-id="{{gem.id}}">DISLIKE</button> {{gem.dislikes}} 
+                <button class="btn btn-link dislike-btn" type="submit" data-id="{{gem.id}}">DISLIKE</button> <p class="count-lk">{{gem.dislikes}}</p>
             </form>
-
+            </div>
+            </div>
+            
+{{/if}}
                 
 
 
-            {{/if}}
+            
             
 
         </div>
