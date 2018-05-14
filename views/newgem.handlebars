@@ -2,11 +2,11 @@
     <p id="sign-in-header">New Gem</p>
     <form id="new_post_form" name="newgem" method="post" action="/newgem">
         <div class="form-group">
-            <input name="title" id="title_input" class="form-control form-control-lg" type="text" placeholder="Title" />
+            <input name="title" id="title_input validationDefaultUsername" class="form-control form-control-lg" type="text" placeholder="Title" aria-describedby="inputGroupPrepend2" required/>
             <br>
         </div>
         <div class="form-group">
-            <select class="form-control form-control-lg" name="category" id="exampleFormControlSelect1">
+            <select class="form-control form-control-lg" name="category" id="exampleFormControlSelect1" required="required">
                 <option value="" disabled selected> Select Category</option>
                 <option>Art</option>
                 <option>Outdoors</option>
@@ -16,16 +16,19 @@
             <br>
         </div>
         <div class="form-group">
-            <input name="address" id="address" class="form-control form-control-lg" type="text" placeholder="Location" />
+            <input name="address" id="address validationDefaultUsername" class="form-control form-control-lg" type="text" placeholder="Location" aria-describedby="inputGroupPrepend2" required/>
             <br>
         </div>
         <div class="form-group">
-            <textarea name="description" id="content_input" maxlength="9000" class="form-control form-control-lg" rows="5" cols="30"
-                placeholder="Describe your gem!"></textarea>
+
+        <textarea name="description" type="text" class="form-control form-control-lg" id="validationDefaultUsername content_input" maxlength="9000" placeholder="Describe your Gem!" rows="5" cols="30" aria-describedby="inputGroupPrepend2" required></textarea>
+            {{!-- <textarea name="description" id="content_input" maxlength="9000" class="form-control form-control-lg" rows="5" cols="30"
+                placeholder="Describe your gem!">
+                </textarea> --}}
             <br>
         </div>
         <div class="form-group">
-            <input type="url" name="image" class="form-control-file form-control-lg" id="post_img_url" placeholder="Image URL">
+            <input type="url" name="image" class="form-control-file form-control-lg" id="post_img_url" placeholder="Image URL (optional)">
             <br>
         </div>
         <button class="btn btn-outline-primary" id="new_post_submit">Add Gem</button>

@@ -1,7 +1,8 @@
 {
     "development": {
         "username": "root",
-
+        "password": "root",
+        "port": 8889,
         "database": "db_gems",
         "host": "localhost",
         "dialect": "mysql"
