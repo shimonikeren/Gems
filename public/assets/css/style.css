@@ -344,7 +344,7 @@ h5 {
 .sub {}
 
 #comments {
-    width: 50rem;
+    /* width: 50rem;*/
     margin-bottom: 10rem;
 }
 
@@ -425,3 +425,5 @@ h5 {
 .back-button {
     margin-bottom: 5rem;
 }
+
+#comment-input {}

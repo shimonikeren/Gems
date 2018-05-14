@@ -1,7 +1,7 @@
 
-<div class="container">
+<div class="container box">
     {{!<div class="row justify-content-center align-items-center text-center">}}
-        <div class="card" id="more-info-card" {{!--style="width: 55rem;"--}}>
+        <div class="card" id="more-info-card"> {{!--style="width: 55rem;"--}}
             <img class="card-img-top" id="more-info-img" src="{{gem.image}}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title" id="more-info-title">{{gem.title}}</h5>
@@ -20,32 +20,33 @@
             {{/if}} 
                 {{#if user}}
                     <div class="container" id="comments">
-                        <form action="/comments/{{gem.id}}/add" method="POST">
-                            <div class="form-group">
-                                <p>Add Comment:</p>
-                                <input class="form-control" type="text" name="comment" palseholder="text" required="required">
-                            </div>
-                            <button  type="submit" class="btn btn-outline-primary comment-btn">Submit Comment!</button>
-                        </form>
-
-                        <form action="/comments/{{gem.id}}/all" method="GET">
-                        <button class="btn btn-outline-primary comment-btn " type="submit" data-id="{{gem.id}}">See All Comments</button>
-                        </form>
-
-                            {{/if}}
-                        {{#if gem.User.username}}
-                        <div class="container justify-content-md-center">
-                            <div class="row justify-content-md-center">
-                                <form class="put_update">
-                                    <button class="btn btn-link like-btn " type="submit" data-id="{{gem.id}}">LIKE</button> <p class="count-lk">{{gem.likes}}</p>
+                        <div class="row justify-content-center align-items-center text-center">
+                            <div class="col-12">
+                                <form action="/comments/{{gem.id}}/add" method="POST">
+                                <div class="form-group">
+                                    <p>Add Comment:</p>
+                                    <input class="form-control" id="comment-input" type="text" name="comment" palseholder="text" required="required">
+                                </div>
+                                    <button  type="submit" class="btn btn-outline-primary comment-btn">Submit Comment!</button>
                                 </form>
-                                <form class="put_update">
-                                    <button class="btn btn-link dislike-btn" type="submit" data-id="{{gem.id}}">DISLIKE</button> <p class="count-lk">{{gem.dislikes}}</p>
+                                <form action="/comments/{{gem.id}}/all" method="GET">
+                                    <button class="btn btn-outline-primary comment-btn " type="submit" data-id="{{gem.id}}">See All Comments</button>
                                 </form>
+                                {{/if}}
+                                {{#if gem.User.username}}
+                                    <div class="container justify-content-md-center">
+                                        <div class="row justify-content-md-center">
+                                            <form class="put_update">
+                                                <button class="btn btn-link like-btn " type="submit" data-id="{{gem.id}}">LIKE</button> <p class="count-lk">{{gem.likes}}</p>
+                                            </form>
+                                            <form class="put_update">
+                                                <button class="btn btn-link dislike-btn" type="submit" data-id="{{gem.id}}">DISLIKE</button> <p class="count-lk">{{gem.dislikes}}</p>
+                                            </form>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
                 {{/if}}
-                
-    </div>
+        </div>
 </div>
