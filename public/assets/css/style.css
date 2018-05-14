@@ -7,6 +7,7 @@
     opacity: 0.9;
 }
 
+https: //drive.google.com/file/d/1wcsKn4eNrm9h4kZRi5gQTrOTxEcTDYH5/view?usp=sharing
 .message {
     font-family: Amatic SC;
     position: absolute;
@@ -178,7 +179,7 @@
     border-color: #09cdef;
     border-radius: 0.625rem;
     height: 18.75rem;
-    width: 37.5rem;
+    max-width: 37.5rem;
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
@@ -310,9 +311,9 @@ h5 {
     border-radius: 0.625rem;
     margin-top: 10rem;
     margin-bottom: 5rem;
-    min-height: 50rem;
-    min-width: 50rem;
-    max-width: 50rem;
+    /*min-height: 50rem;*/
+    /*min-width: 50rem;*/
+    /*max-width: 50rem;*/
 }
 
 #more-info-img {
