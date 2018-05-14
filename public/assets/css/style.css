@@ -190,7 +190,7 @@ https: //drive.google.com/file/d/1wcsKn4eNrm9h4kZRi5gQTrOTxEcTDYH5/view?usp=shar
     border-color: #09cdef;
     border-radius: 0.625rem;
     height: 33rem;
-    width: 35rem;
+    max-width: 35rem;
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
