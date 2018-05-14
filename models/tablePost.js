@@ -19,10 +19,10 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
             validate: {
-                len: [2, 10000]
+                len: [1, 10000]
             }
         },
         image: {
