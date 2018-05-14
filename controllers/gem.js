@@ -13,6 +13,7 @@ const POST_ATTR = [
 ];
 module.exports = (app) => {
     app.post("/newgem", (req, res) => {
+
         if (req.user) {
             let post = req.body;
             //console.log("gem  " + req.body);
@@ -21,7 +22,9 @@ module.exports = (app) => {
             db.UserPosts.create(post).then((gem) => {
                 res.render('show', {
                     user: req.user,
-                    gem: gem
+                    gem: gem,
+
+
                 });
                 //res.json({ id: result.id });
 
@@ -154,7 +157,8 @@ module.exports = (app) => {
         }).then((gems) => {
             res.render("gems", {
                 gems: gems,
-                msg: "Events"
+                msg: "Events",
+                user: req.user
             })
         })
     })
@@ -169,7 +173,8 @@ module.exports = (app) => {
         }).then((gems) => {
             res.render("gems", {
                 gems: gems,
-                msg: "Others"
+                msg: "Others",
+                user: req.user
             })
         })
     })

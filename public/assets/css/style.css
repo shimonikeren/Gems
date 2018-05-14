@@ -1,398 +1,417 @@
 #nav-container {
-  margin: 0rem;
-  width: 100%;
+    margin: 0rem;
+    width: 100%;
 }
 
 .navbar {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
 .message {
-  font-family: Amatic SC;
-  position: absolute;
-  margin: auto 0;
+    font-family: Amatic SC;
+    position: absolute;
+    margin: auto 0;
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 3.75rem;
-  line-height: 3.75rem;
-  text-align: center;
-  font-size: 1.25rem;
-  background-color: #f5f5f5;
-  font-family: Amatic SC;
-  color: #09cdef;
-  opacity: 0.9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: center;
+    font-size: 1.25rem;
+    background-color: #f5f5f5;
+    font-family: Amatic SC;
+    color: #09cdef;
+    opacity: 0.9;
 }
 
 .jumbotron {
-  background-image: url(../images/muralspace.jpg);
-  background-size: cover;
-  background-position: center top;
-  height: 25rem;
-  margin: 0rem 0rem 5rem 0rem;
-  text-align: center;
+    background-image: url(../images/muralspace.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 25rem;
+    margin: 0rem 0rem 5rem 0rem;
+    text-align: center;
 }
 
 #main-title {
-  font-family: Amatic SC;
-  font-size: 5rem;
-  color: white;
-  font-weight: bold;
+    font-family: Amatic SC;
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
 }
 
 .jumboText {
-  font-size: 1.875rem;
-  font-family: Josefin Sans;
-  color: white;
+    font-size: 1.875rem;
+    font-family: Josefin Sans;
+    color: white;
 }
 
 #card {
-  margin-bottom: 10rem;
+    margin-bottom: 10rem;
 }
 
 .eachCard {
-  margin: 2.5rem;
-  border: 0.3125rem;
-  border-style: double;
-  border-color: #09cdef;
-  border-radius: 0.625rem;
-  font-family: Josefin Sans;
+    margin: 2.5rem;
+    border: 0.3125rem;
+    border-style: double;
+    border-color: #09cdef;
+    border-radius: 0.625rem;
+    font-family: Josefin Sans;
+    height: 35rem;
 }
 
 .img_post {
-  width: 7rem;
+    width: 7rem;
 }
 
 .brand {
-  padding: 0rem 0.3125rem 0rem 0.3125rem;
-  margin-top: 0.3125rem;
-  display: inline;
-  font-family: Amatic SC;
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #09cdef;
-  letter-spacing: 0.125rem;
+    padding: 0rem 0.3125rem 0rem 0.3125rem;
+    margin-top: 0.3125rem;
+    display: inline;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #09cdef;
+    letter-spacing: 0.125rem;
 }
 
 #home:link {
-  padding: 0rem 0.3125rem 0rem 0.3125rem;
-  margin-top: 0.3125rem;
-  display: inline;
-  font-family: Amatic SC;
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #09cdef;
-  letter-spacing: 0.125rem;
+    padding: 0rem 0.3125rem 0rem 0.3125rem;
+    margin-top: 0.3125rem;
+    display: inline;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #09cdef;
+    letter-spacing: 0.125rem;
 }
 
 #home:visited {
-  padding: 0rem 0.3125rem 0rem 0.3125rem;
-  margin-top: 0.3125rem;
-  display: inline;
-  font-family: Amatic SC;
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #09cdef;
-  letter-spacing: 0.125rem;
+    padding: 0rem 0.3125rem 0rem 0.3125rem;
+    margin-top: 0.3125rem;
+    display: inline;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #09cdef;
+    letter-spacing: 0.125rem;
 }
 
 #home:hover {
-  padding: 0rem 0.3125rem 0rem 0.3125rem;
-  margin-top: 0.3125rem;
-  display: inline;
-  font-family: Amatic SC;
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #09cdef;
-  letter-spacing: 0.125rem;
-  text-decoration: none;
+    padding: 0rem 0.3125rem 0rem 0.3125rem;
+    margin-top: 0.3125rem;
+    display: inline;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #09cdef;
+    letter-spacing: 0.125rem;
+    text-decoration: none;
 }
 
 #logo-left {
-  position: relative;
+    position: relative;
 }
 
 #homeright {
-  position: relative;
-  top: 0.625rem;
+    position: relative;
+    top: 0.625rem;
 }
 
 #title {
-  position: absolute;
-  left: 50%;
-  margin-left: -3.125rem !important;
-  display: block;
-  font-family: Amatic SC;
-  font-weight: bold;
-  font-size: 3.125rem;
-  color: #09cdef;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.125rem !important;
+    display: block;
+    font-family: Amatic SC;
+    font-weight: bold;
+    font-size: 3.125rem;
+    color: #09cdef;
 }
 
 .navbar-brand {
-  font-family: Josefin Sans;
-  font-weight: bold;
-  font-size: 20.3125rem;
-  color: #09cdef;
-  letter-spacing: 0.125rem;
+    font-family: Josefin Sans;
+    font-weight: bold;
+    font-size: 20.3125rem;
+    color: #09cdef;
+    letter-spacing: 0.125rem;
 }
 
 #welcome {
-  font-family: Amatic SC;
-  color: #09cdef;
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.125rem;
-  position: relative;
-  bottom: 0.3125rem;
+    font-family: Amatic SC;
+    color: #09cdef;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.125rem;
+    position: relative;
+    bottom: 0.3125rem;
 }
 
 .nav-link:not(#welcome):link {
-  font-family: Josefin Sans;
-  font-size: 1.125rem;
-  color: #09cdef !important;
-  font-weight: normal;
+    font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef !important;
+    font-weight: normal;
 }
 
 .nav-link:not(#welcome):visited {
-  font-family: Josefin Sans;
-  font-size: 1.125rem;
-  color: #09cdef !important;
-  font-weight: normal;
+    font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef !important;
+    font-weight: normal;
 }
 
 .nav-link:not(#welcome):hover {
-  font-family: Josefin Sans;
-  font-size: 1.125rem;
-  color: #09cdef !important;
-  letter-spacing: 0.0625rem;
-  font-weight: normal;
+    font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef !important;
+    letter-spacing: 0.0625rem;
+    font-weight: normal;
 }
 
 #sign-in-box {
-  border: 0.3125rem;
-  border-style: double;
-  border-color: #09cdef;
-  border-radius: 0.625rem;
-  height: 18.75rem;
-  width: 37.5rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+    border: 0.3125rem;
+    border-style: double;
+    border-color: #09cdef;
+    border-radius: 0.625rem;
+    height: 18.75rem;
+    width: 37.5rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 #sign-up-box {
-  border: 0.3125rem;
-  border-style: double;
-  border-color: #09cdef;
-  border-radius: 0.625rem;
-  height: 33rem;
-  width: 35rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+    border: 0.3125rem;
+    border-style: double;
+    border-color: #09cdef;
+    border-radius: 0.625rem;
+    height: 33rem;
+    width: 35rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 #new-in-box {
-  border: 0.3125rem;
-  border-style: double;
-  border-color: #09cdef;
-  border-radius: 0.625rem;
-  /* height: 45rem; 
+    border: 0.3125rem;
+    border-style: double;
+    border-color: #09cdef;
+    border-radius: 0.625rem;
+    /* height: 45rem; 
     width: 35rem;  */
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 #sign-in-header {
-  font-family: Amatic SC;
-  font-size: 3.125rem;
-  font-weight: bold;
-  color: #09cdef;
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  padding: 0.625rem;
+    font-family: Amatic SC;
+    font-size: 3.125rem;
+    font-weight: bold;
+    color: #09cdef;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 0.625rem;
 }
 
 .logins {
-  font-family: Josefin Sans;
-  font-size: 1em;
-  color: #09cdef;
+    font-family: Josefin Sans;
+    font-size: 1em;
+    color: #09cdef;
 }
 
 #login-btn-parent {
-  text-align: center;
-  margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .btn-outline-primary {
-  background: #09cdef;
-  color: #fff;
-  border: none;
-  position: relative;
-  height: 3.125rem;
-  font-size: 1.6em;
-  font-family: Amatic SC;
-  color: white;
-  padding: 0 2em;
-  cursor: pointer;
-  transition: 800ms ease all;
-  outline: none;
+    background: #09cdef;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 3.125rem;
+    font-size: 1.6em;
+    font-family: Amatic SC;
+    color: white;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
 }
 
 .btn-outline-primary:hover {
-  background: #fff;
-  color: #09cdef;
+    background: #fff;
+    color: #09cdef;
 }
 
 .btn-outline-primary:before,
 .btn-outline-primary:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 0.125rem;
-  width: 0;
-  background: #09cdef;
-  transition: 400ms ease all;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0.125rem;
+    width: 0;
+    background: #09cdef;
+    transition: 400ms ease all;
 }
 
 .btn-outline-primary:after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
 }
 
 .btn-outline-primary:hover:before,
 .btn-outline-primary:hover:after {
-  width: 100%;
-  transition: 800ms ease all;
+    width: 100%;
+    transition: 800ms ease all;
 }
 
 .carousel-inner,
 .item {
-  width: 100%;
-  height: 20rem;
+    width: 100%;
+    height: 20rem;
 }
+
 
 /* .carousel {
   margin-top: 5rem;
 } */
 
 h5 {
-  text-align: left;
+    text-align: left;
 }
 
 #text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-img-top {
-  height: 40%;
-  padding: 0.625rem;
+    height: 40%;
+    padding: 0.625rem;
 }
 
 #gem-card {
-  max-width: 18.625rem;
-  max-height: 28.1875rem;
+    max-width: 18.625rem;
+    max-height: 28.1875rem;
 }
 
 #more-info-card {
-  border: 0.3125rem;
-  border-style: double;
-  border-color: #09cdef;
-  border-radius: 0.625rem;
-  margin-top: 10rem;
-  margin-bottom: 5rem;
-  min-height: 50rem;
-  min-width: 50rem;
-  max-width: 50rem;
+    border: 0.3125rem;
+    border-style: double;
+    border-color: #09cdef;
+    border-radius: 0.625rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    min-height: 50rem;
+    min-width: 50rem;
+    max-width: 50rem;
 }
 
 #more-info-img {
-  max-height: 18.625rem;
-  max-height: 25rem;
-
-  padding: 0.625rem;
+    max-height: 18.625rem;
+    max-height: 25rem;
+    padding: 0.625rem;
 }
 
 #more-info-title {
-  font-family: Amatic SC;
-  font-size: 3.125rem;
-  color: #09cdef;
+    font-family: Amatic SC;
+    font-size: 3.125rem;
+    color: #09cdef;
 }
 
 #more-info-location {
-  font-family: Josefin Sans;
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: #09cdef;
-}
-#more-info-description {
-  font-family: Josefin Sans;
-  font-size: 1.125rem;
-  color: #09cdef;
+    font-family: Josefin Sans;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #09cdef;
 }
 
-.sub {
+#more-info-description {
+    font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef;
 }
+
+.sub {}
 
 #comments {
-  width: 50rem;
-  margin-bottom: 10rem;
+    width: 50rem;
+    margin-bottom: 10rem;
 }
 
 .deleteButton {
-  margin-bottom: 0.3125rem;
-  margin-left: 1.25rem;
-  font-family: Amatic SC;
-  font-size: 1.125rem;
-  color: cc0000;
+    margin-bottom: 0.3125rem;
+    margin-left: 1.25rem;
+    font-family: Amatic SC;
+    font-size: 1.125rem;
+    color: cc0000;
 }
 
 .category-msg {
-  font-family: Amatic SC;
-  color: #09cdef;
-  font-size: 3rem;
-  text-align: left;
-  margin-bottom: 0rem;
+    font-family: Amatic SC;
+    color: #09cdef;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 0rem;
 }
 
 #more-info-btn {
-  float: left;
+    float: left;
 }
 
 .carousel-inner {
-  width: 100%;
-  height: 20rem;
+    width: 100%;
+    height: 20rem;
 }
 
 .carousel-item {
-  position: relative;
-  overflow: hidden;
-  height: 360px;
+    position: relative;
+    overflow: hidden;
+    height: 360px;
 }
 
 .carousel-item img {
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  height: auto;
-  width: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
 .commentCard {
-  border: 0.3125rem;
-  border-style: double;
-  border-color: #09cdef;
-  border-radius: 0.625rem;
-  margin-top: 10rem;
-  margin-bottom: 5rem;
-  max-height: 50rem;
-  max-width: 50rem;
+    border: 0.3125rem;
+    border-style: double;
+    border-color: #09cdef;
+    border-radius: 0.625rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    max-height: 50rem;
+    max-width: 50rem;
+}
+
+.comment-btn {
+    width: 17rem;
+    margin: 0.5rem;
+}
+
+.like-btn {
+    border: solid 1px #09cdef;
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+}
+
+.dislike-btn {
+    border: solid 1px #09cdef;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
 }
