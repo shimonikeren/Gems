@@ -61,7 +61,7 @@ https: //drive.google.com/file/d/1wcsKn4eNrm9h4kZRi5gQTrOTxEcTDYH5/view?usp=shar
     border-color: #09cdef;
     border-radius: 0.625rem;
     font-family: Josefin Sans;
-    height: 32rem;
+    height: 33rem;
 }
 
 .card-img-top {
@@ -72,7 +72,8 @@ https: //drive.google.com/file/d/1wcsKn4eNrm9h4kZRi5gQTrOTxEcTDYH5/view?usp=shar
 
 #gem-card {
 max-width: 18.625rem;
-max-height: 32rem;
+max-height: 33rem;
+border: 0px;
 }
 
 .img_post {
@@ -294,6 +295,23 @@ max-height: 32rem;
     height: 20rem;
 }
 
+.carousel-caption{
+  background-color: black;
+  opacity: .7;
+  width: 20rem;
+  height: 5rem;
+}
+
+.carousel-cap {
+  text-align: center;
+  font-family: Josefin Sans;
+}
+
+.card-body {
+  /* font-family: Josefin Sans;
+  font-size: 1.125rem;
+  color: #09cdef; */
+}
 
 /* .carousel {
   margin-top: 5rem;
@@ -307,6 +325,9 @@ h5 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: Josefin Sans;
+    font-size: 1.125rem;
+    color: #09cdef;
 }
 
 
@@ -455,4 +476,22 @@ h5 {
     font-size: 1.125rem;
     color: #09cdef;
     letter-spacing: .125rem;
+}
+
+#gem-title {
+  font-family: Amatic SC;
+  font-weight: bold;
+  font-size: 2.125rem;
+  color: #09cdef;
+}
+
+
+
+
+
+#gem-address {
+  font-family: Josefin Sans;
+  font-weight: bold;
+    font-size: 1.125rem;
+    color: #09cdef;
 }
