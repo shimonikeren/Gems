@@ -18,6 +18,9 @@ module.exports = (app) => {
             include: [{
                 model: db.UserPosts,
                 attributes: POST_ATTR
+            }, {
+                model: db.User,
+                attributes: USER_ATTR
             }]
         }).then((comments) => {
             if (comments) {

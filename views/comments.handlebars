@@ -1,30 +1,29 @@
 
-<div class="container">
+<div class="container comment-list">
      {{#if comments}} 
-     {{#each comments}}
- <div class="card commentCard" style="width: 45rem;">
-    <div class="card-header">
-        {{this.User.username}}
+        {{#each comments}}
+        <div class="card commentCard" style="width: 45rem;">
+            <div class="card-header">
+                {{this.User.username}}
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{this.Comment}}</li>
+            <li class="list-group-item">{{this.createdAt}}</li>
+            </ul>
+        </div>
         
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{this.Comment}}</li>
-        <li class="list-group-item">{{this.createdAt}}</li>
         
-        
-    </ul>
-</div>
-<div class="form-group">
-    {{!--<a href="/gems/{{this.UserPostId}}" class="btn btn-primary btn-outline-primary">Back</a>--}}
-    <p></p>
-    {{else}}
-    <p>No Comments</p>
-    {{/each }} {{/if}}
-    <p></p>
-    {{#if curPostId }}
+        {{/each }}
+        {{else}}
+                <p class="category-msg">No Comments</p>
+        {{/if}}
+    
+            {{#if curPostId }}
    
-    <a href="/gems/{{curPostId}}" class="btn btn-primary btn-outline-primary">Back</a>
-    {{/if}}
+            <a href="/gems/{{curPostId}}" class="btn btn-primary btn-outline-primary back-button">Back</a>
+            {{/if}}
     
 
-</div>
+        </div>
+        </div>
+

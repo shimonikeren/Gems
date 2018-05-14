@@ -394,8 +394,8 @@ h5 {
     border-style: double;
     border-color: #09cdef;
     border-radius: 0.625rem;
-    margin-top: 10rem;
-    margin-bottom: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     max-height: 50rem;
     max-width: 50rem;
 }
@@ -415,4 +415,12 @@ h5 {
 .count-lk {
     float: right;
     padding-top: 1rem;
+}
+
+.comment-list {
+    margin-top: 5rem;
+}
+
+.back-button {
+    margin-bottom: 5rem;
 }
