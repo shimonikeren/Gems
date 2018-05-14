@@ -20,9 +20,9 @@ module.exports = function(sequelize, DataTypes) {
         // We're saying that a Post should belong to a Category
         // A Post can't be created without an Category due to the foreign key constraint
         Comments.belongsTo(models.UserPosts, {
-            foreignKey: {
-                allowNull: false
-            }
+            foreignKeyConstraint: true,
+            onDelete: 'cascade',
+            hooks: true
         });
     };
 
