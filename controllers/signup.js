@@ -6,7 +6,7 @@ module.exports = (app) => {
             req.body['username'],
             req.body['password'],
             (err, registeredUser) => {
-                console.log("***" + err);
+                console.log(err);
                 if (err) {
                     console.log(err.class);
                     return res.render('signup', {
@@ -30,8 +30,6 @@ module.exports = (app) => {
             }
             if (!user) {
                 console.log("wrong password");
-                // $(".message").alert();
-
                 return res.render('login', {
                     title: 'Invalid username or password. Try again.',
                     users: null
@@ -42,8 +40,6 @@ module.exports = (app) => {
                 if (err) {
                     return next(err)
                 }
-                console.log("login " + user.username)
-                console.log("info" + info)
                 return res.redirect('/');
 
             });

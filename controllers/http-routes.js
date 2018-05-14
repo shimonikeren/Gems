@@ -1,6 +1,5 @@
 module.exports = (app) => {
     app.get("/", (req, res) => {
-        //res.redirect('/gems/all')
         res.redirect("gems/all")
     });
     app.get("/signup", (req, res) => {
@@ -13,9 +12,5 @@ module.exports = (app) => {
     app.get("/newgem", (req, res) => {
         res.render("newgem", { user: req.user })
     })
-
-    //app.post('/newgem', (req, res) => {
-    //res.render("new")
-    //})
 
 }
