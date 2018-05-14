@@ -51,24 +51,19 @@
                     <p class="card-text text-left" id="text">{{this.description}}</p>
                     <p class="card-text text-left">{{this.category}}</p>
                     <p class="card-text text-left">{{this.address}}</p>
-                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary text-center" id="more-info-btn">More Info</a>
+                    <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary " id="more-info-btn">More Info</a>
                 </div>
-<div class ="row">
-                     <form class="put_update">
-                        <button class="btn btn-link like-btn" type="submit" data-id="{{this.id}}">LIKE</button> {{this.likes}}
-                    </form>
+                
 
-                    <form class="put_update">
-                        <button class="btn btn-link dislike-btn" type="submit" data-id="{{this.id}}">DISLIKE</button> {{this.dislikes}}
-                    </form>
-
-
-
-                </div>
-
-
-
-
+            </div>
+            <div class="row">
+                <form class="put_update">
+                    <button class="btn btn-link like-btn" type="submit" data-id="{{this.id}}">LIKE</button> <p class="count-lk">{{this.likes}}</p>
+                </form>
+            
+                <form class="put_update">
+                    <button class="btn btn-link dislike-btn" type="submit" data-id="{{this.id}}">DISLIKE</button> <p class="count-lk">{{this.dislikes}}</p>
+                </form>
             </div>
         </div>
         {{/each}}

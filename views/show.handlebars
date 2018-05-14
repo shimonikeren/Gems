@@ -36,14 +36,18 @@
 
 {{/if}}
              {{#if gem.User.username}}
+             <div class="container justify-content-md-center">
+             <div class="row justify-content-md-center">
             <form class="put_update">
-                <button class="btn btn-link like-btn " type="submit" data-id="{{gem.id}}">LIKE</button> {{gem.likes}} 
+                <button class="btn btn-link like-btn " type="submit" data-id="{{gem.id}}">LIKE</button> <p class="count-lk">{{gem.likes}}</p>
 
             </form>
 
             <form class="put_update">
-                <button class="btn btn-link dislike-btn" type="submit" data-id="{{gem.id}}">DISLIKE</button> {{gem.dislikes}} 
+                <button class="btn btn-link dislike-btn" type="submit" data-id="{{gem.id}}">DISLIKE</button> <p class="count-lk">{{gem.dislikes}}</p>
             </form>
+            </div>
+            </div>
             
 {{/if}}
                 

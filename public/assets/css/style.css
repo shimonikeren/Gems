@@ -365,6 +365,7 @@ h5 {
 
 #more-info-btn {
     float: left;
+    height: 2.5rem;
 }
 
 .carousel-inner {
@@ -404,14 +405,14 @@ h5 {
     margin: 0.5rem;
 }
 
-.like-btn {
+.like-btn,
+.dislike-btn {
     border: solid 1px #09cdef;
-    margin-left: 3rem;
+    margin: 2rem;
     margin-top: 0.5rem;
 }
 
-.dislike-btn {
-    border: solid 1px #09cdef;
-    margin-left: 2rem;
-    margin-top: 0.5rem;
+.count-lk {
+    float: right;
+    padding-top: 1rem;
 }
