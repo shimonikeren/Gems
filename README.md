@@ -11,12 +11,15 @@ place description here
 * HTML
 * CSS, Bootstrap
 * JavaScript, jQuery
+* node.js
+* express.js
 * mySQL
 * heroku 
 * handlebars 
 * yarn 
+* passport.js 
 
-## NPM Packages: 
+## NPM/Yarn Packages: 
 * body-parser
 * chai
 * cookie-parser
