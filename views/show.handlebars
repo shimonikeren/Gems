@@ -25,7 +25,7 @@
                                 <form action="/comments/{{gem.id}}/add" method="POST">
                                 <div class="form-group">
                                     
-                                    <input class="form-control form-control-lg" id="comment-input" type="text" name="comment" placeholder="What do you think of this gem? Add a comment!" required="required">
+                                    <input class="form-control form-control-lg" maxlength="999"id="comment-input" type="text" name="comment" placeholder="What do you think of this gem? Add a comment!" required="required">
                                 </div>
                                     <button  type="submit" class="btn btn-outline-primary comment-btn">Submit Comment!</button>
                                 </form>

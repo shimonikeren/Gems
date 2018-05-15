@@ -46,15 +46,13 @@
             <div class="card h-100" id="gem-card" style="width: 18rem;">
                 <img class="card-img-top" src="{{this.image}}" alt="">
                 <div class="card-body">
-
                     <h5 class="card-title text-left" id="gem-title">{{this.title}}</h5>
                     <p class="card-text text-left" id="gem-address">{{this.address}}</p>
                     <p class="card-text text-left" id="text">{{this.description}}</p>
                     {{!-- <p class="card-text text-left" id="gem-category">{{this.category}}</p> --}}
                     
                     <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary " id="more-info-btn">More Info</a>
-                </div>
-                <div class="row" id="likes-disklikes" style="width: 18rem; position: relative; left: 2.2rem; bottom: .75rem;color: #09cdef; font-family: Josefin Sans; font-size: 1.125rem;">
+                    <div class="row" id="likes-disklikes" style="width: 18rem;  color: #09cdef; font-family: Josefin Sans; font-size: 1.125rem;">
                 <form class="put_update">
                     <button class="btn btn-link like-btn" type="submit" data-id="{{this.id}}"><img class="img-responsive likedislike" id="like-logo"src="../../public/assets/images/like.png" alt="*" height="25" width="25"></button> <p class="count-lk">{{this.likes}}</p>
                 </form>
@@ -63,6 +61,8 @@
                     <button class="btn btn-link dislike-btn" type="submit" data-id="{{this.id}}"><img class="img-responsive likedislike" id="like-logo"src="../../public/assets/images/dislike.png" alt="*" height="25" width="25" rotate="50%"></button> <p class="count-lk">{{this.dislikes}}</p>
                 </form>
               </div>  
+                </div>
+                
           </div>
             
         </div>
