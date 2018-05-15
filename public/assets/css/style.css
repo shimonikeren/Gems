@@ -488,7 +488,7 @@ h5 {
 
 .added-by {
   font-family: Josefin Sans;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #09cdef;
 }
 
@@ -514,7 +514,11 @@ h5 {
 
 
 
-
+.count-lk {
+  color: #09cdef;
+    font-family: Josefin Sans;
+    font-size: 1.125rem;
+}
 
 #gem-address {
   font-family: Josefin Sans;
