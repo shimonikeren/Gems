@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var Comments = sequelize.define("Comments", {
         Comment: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
             validate: {
                 len: [2, 1000]

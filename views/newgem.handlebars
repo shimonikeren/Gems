@@ -2,7 +2,7 @@
     <p id="sign-in-header">New Gem</p>
     <form id="new_post_form" name="newgem" method="post" action="/newgem">
         <div class="form-group">
-            <input name="title" id="title_input validationDefaultUsername" class="form-control form-control-lg" type="text" placeholder="Title" aria-describedby="inputGroupPrepend2" required/>
+            <input name="title" id="title_input validationDefaultUsername" maxlength="499"class="form-control form-control-lg" type="text" placeholder="Title" aria-describedby="inputGroupPrepend2" required/>
             <br>
         </div>
         <div class="form-group">
@@ -16,12 +16,12 @@
             <br>
         </div>
         <div class="form-group">
-            <input name="address" id="address validationDefaultUsername" class="form-control form-control-lg" type="text" placeholder="Location" aria-describedby="inputGroupPrepend2" required="required"/>
+            <input name="address" id="address validationDefaultUsername" maxlength="499"class="form-control form-control-lg" type="text" placeholder="Location" aria-describedby="inputGroupPrepend2" required="required"/>
             <br>
         </div>
         <div class="form-group">
 
-        <textarea name="description" type="text" class="form-control form-control-lg" id="validationDefaultUsername content_input" maxlength="10000" placeholder="Describe your Gem! Give us as much information as you think we need. Special directions, event dates, etc..." rows="5" cols="30" aria-describedby="inputGroupPrepend2" required></textarea>
+        <textarea name="description" type="text" class="form-control form-control-lg" id="validationDefaultUsername content_input" maxlength="9999" placeholder="Describe your Gem! Give us as much information as you think we need. Special directions, event dates, etc..." rows="5" cols="30" aria-describedby="inputGroupPrepend2" required></textarea>
             {{!-- <textarea name="description" id="content_input" maxlength="9000" class="form-control form-control-lg" rows="5" cols="30"
                 placeholder="Describe your gem!">
                 </textarea> --}}
