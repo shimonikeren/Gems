@@ -6,6 +6,7 @@
 * Users and Guests can all *Like* or *Dislike* Gems 
 * Users can Post new Gems 
 * Users can Comment on existing Gems
+* Users can Delete their own Gems 
 
 **Link to App Demo** 
 [Click Here](https://salty-dusk-63222.herokuapp.com/gems/all)
