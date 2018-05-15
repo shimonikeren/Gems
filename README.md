@@ -9,7 +9,7 @@
 * Users can Delete their own Gems 
 
 **Link to App Demo** 
-[Click Here](https://salty-dusk-63222.herokuapp.com/gems/all)
+[Click Here](https://murmuring-bastion-76922.herokuapp.com/gems/all)
 
 ## Technologies used: 
 * HTML
