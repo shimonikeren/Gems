@@ -181,7 +181,7 @@ border: 0px;
     font-family: Josefin Sans;
     font-size: 1.125rem;
     color: #09cdef !important;
-    letter-spacing: 0.0625rem;
+    letter-spacing: 0.125rem;
     font-weight: normal;
 }
 
@@ -437,11 +437,38 @@ h5 {
     margin: 0.5rem;
 }
 
-.like-btn,
-.dislike-btn {
-    border: solid 1px #09cdef;
-    margin: 1.7rem;
+.likedislike {
+    /* border: solid 1px #09cdef; */
+    margin: 1.5rem;
     margin-top: 0.5rem;
+    font-family: Amatic SC;
+    font-size: 1.25rem;
+}
+
+.likedislike:hover {
+  /* border: solid 1px #09cdef; */
+  
+  animation: shake 2s;
+  animation-iteration-count: infinite;
+    margin: 1.5rem;
+    margin-top: 0.5rem;
+  
+    font-family: Amatic SC;
+  
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 .count-lk {
@@ -495,3 +522,4 @@ h5 {
     font-size: 1.125rem;
     color: #09cdef;
 }
+
