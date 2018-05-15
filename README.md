@@ -1,6 +1,11 @@
 # Gems
-## *insert catchphrase here*
-place description here
+
+### Have you ever had little or no money? Been a starving student? Wanted to impress your first date, but just couldn't afford it? Look no further, because our App is for you! Gems is an App where users can look up fun, hip, and most importantly, FREE, things to do in their city. 
+#### Users can:
+* Look up Gems by category: Art, Events, Outdoors, Other
+* Post Gems 
+* Comment on Gems
+* Like or Dislike Gems 
 
 ![Gem Logo](/public/assets/images/gemSac.png) 
 
