@@ -54,14 +54,7 @@
                     
                     <a href="/gems/{{this.id}}" class="btn btn-primary btn-outline-primary " id="more-info-btn">More Info</a>
                 </div>
-              <div class="row" id="likes-disklikes" style="
-    width: 18rem;
-    position: relative;
-    left: 2.2rem;
-    bottom: .75rem;
-    color: #09cdef;
-    font-family: Josefin Sans;
-    font-size: 1.125rem;">
+                <div class="row" id="likes-disklikes" style="width: 18rem; position: relative; left: 2.2rem; bottom: .75rem;color: #09cdef; font-family: Josefin Sans; font-size: 1.125rem;">
                 <form class="put_update">
                     <button class="btn btn-link like-btn" type="submit" data-id="{{this.id}}"><img class="img-responsive likedislike" id="like-logo"src="../../public/assets/images/like.png" alt="*" height="25" width="25"></button> <p class="count-lk">{{this.likes}}</p>
                 </form>
@@ -69,9 +62,8 @@
                 <form class="put_update">
                     <button class="btn btn-link dislike-btn" type="submit" data-id="{{this.id}}"><img class="img-responsive likedislike" id="like-logo"src="../../public/assets/images/dislike.png" alt="*" height="25" width="25" rotate="50%"></button> <p class="count-lk">{{this.dislikes}}</p>
                 </form>
-            </div>  
-
-            </div>
+              </div>  
+          </div>
             
         </div>
         {{/each}}
