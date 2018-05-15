@@ -1,4 +1,4 @@
-# Gems
+![Gem Logo](/public/assets/images/gemSac.png) 
 
 ### Have you ever had little or no money? Been a starving student? Wanted to impress your first date, but just couldn't afford it? Look no further, because our App is for you! Gems is an App where users can look up fun, hip, and most importantly, FREE, things to do in their city. 
 #### Users can choose to sign up and log in, or just view the app as a guest:
@@ -6,8 +6,6 @@
 * Users and Guests can all *Like* or *Dislike* Gems 
 * Users can Post new Gems 
 * Users can Comment on existing Gems
-
-![Gem Logo](/public/assets/images/gemSac.png) 
 
 **Link to App Demo** 
 [Click Here](https://salty-dusk-63222.herokuapp.com/gems/all)
