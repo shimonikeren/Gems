@@ -1,6 +1,6 @@
 ![Gem Logo](/public/assets/images/gemSac.png) 
 
-### Have you ever had little or no money? Been a starving student? Wanted to impress your first date, but just couldn't afford it? Look no further, because our App is for you! Gems is an App where users can look up fun, hip, and most importantly, FREE, things to do in their city. 
+### Have you ever wanted to enjoy your city without breaking the bank? Look no further, because our App is for you! Gems is an App where users can look up fun, hip, and most importantly, FREE, things to do in their city. 
 #### Users can choose to sign up and log in, or just view the app as a guest:
 * Users and Guests can all look up and view Gems by catogory: Art, Events, Outdoors, Other
 * Users and Guests can all *Like* or *Dislike* Gems 
